@@ -17,7 +17,7 @@ export default function LandingHero() {
                 </div>
                 <Image src='/head_shot.jpeg' width='300' height='300' alt='Picture of Arthur' className='ml-40 mr-12 w-96 h-96 bg-red-200 rounded-full'/>
             </div>
-            <button className={`p-6 bg-sky-500/80 rounded-2xl ${montserrat.className} font-bold text-3xl`}>Learn More</button>
+            <button className={`p-6 bg-sky-500/80 hover:bg-sky-600/80 rounded-2xl ${montserrat.className} font-bold text-3xl`}>Learn More</button>
         </div>
     )
 }

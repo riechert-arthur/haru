@@ -21,7 +21,7 @@ export default function NavBar() {
                         <a className='mr-7 text-xl tracking-wide' href={navigationLinks[key]}>{key}</a>
                     ))
                 }
-                <button className='px-4 py-2 bg-sky-500/80 rounded-lg text-xl font-semibold tracking-wide'>Resumè</button>
+                <button className='px-4 py-2 bg-sky-500/80 hover:bg-sky-600/80 rounded-lg text-xl font-semibold tracking-wide'>Resumè</button>
             </div>
         </nav>
     )
