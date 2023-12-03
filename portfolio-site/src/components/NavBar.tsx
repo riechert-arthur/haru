@@ -6,8 +6,8 @@ interface NavigationLinks {
 
 const navigationLinks: NavigationLinks = {
     About: "/about",
-    Experience: "/projects",
-    Projects: "/experience",
+    Projects: "/projects",
+    Experience: "/experience",
     Contact: "/contact",
 }
 
