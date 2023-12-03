@@ -1,4 +1,4 @@
-import { Monsieur_La_Doulaise, Montserrat } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
 interface NavigationLinks {
     [key: string]: string;
