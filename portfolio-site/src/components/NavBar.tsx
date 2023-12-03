@@ -1,4 +1,4 @@
-import { Montserrat } from 'next/font/google'
+import { montserrat } from './Fonts'
 
 interface NavigationLinks {
     [key: string]: string;
@@ -6,16 +6,10 @@ interface NavigationLinks {
 
 const navigationLinks: NavigationLinks = {
     About: "/about",
-    Experience: "/experience",
-    Projects: "/projects",
+    Experience: "/projects",
+    Projects: "/experience",
     Contact: "/contact",
 }
-
-const montserrat = Montserrat({
-    subsets: ['latin'],
-    style: 'normal',
-    weight: ['500', '600'],
-})
 
 export default function NavBar() {
     return (
