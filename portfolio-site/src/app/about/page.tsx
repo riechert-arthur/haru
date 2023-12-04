@@ -4,7 +4,9 @@ import { montserrat } from '../../components/Fonts'
 /**
  * TODO:
  * - Correct display of grades.
- * - Move some code to separate component class. 
+ * - Move some code to separate component class.
+ * - Correct image on page.
+ * - Design and implement skills section
  *
  * @author Arthur Riechert
  * @version 1.0.0
