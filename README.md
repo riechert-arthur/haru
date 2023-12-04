@@ -11,6 +11,7 @@ A portfolio website built in React and Next.js.
 ![About Design Screenshot](/readme-assets/about_figma_design_100.png)
 
 ## TODO
+- Finish implementation of About (Check code comments for TODOs)
 - Add loading animations for navbar and hero.
-- Design and implement About, Projects, Experience, and Contact pages.
+- Design and implement Projects, Experience, and Contact pages.
 - Implement chatbot.
