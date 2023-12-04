@@ -1,6 +1,10 @@
 import Image from 'next/image'
 import Button from '../components/Button'
 
+/**
+ * @author Arthur Riechert
+ * @version 1.0.1
+ */
 export default function LandingHero() {
     return (
         <div>

@@ -3,6 +3,11 @@ import { Inter } from 'next/font/google'
 import NavBar from '../components/NavBar'
 import './globals.css'
 
+/**
+ * @author Arthur Riechert
+ * @version 1.0.0
+ */
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
