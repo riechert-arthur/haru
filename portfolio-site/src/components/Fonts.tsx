@@ -7,7 +7,7 @@ import { Montserrat } from 'next/font/google'
  * All fonts should be declared here. 
  *
  * @author Arthur Riechert
- * @version 1.0.0
+ * @version 1.0.1
  */
 export const montserrat = Montserrat({
     subsets: ['latin'],
