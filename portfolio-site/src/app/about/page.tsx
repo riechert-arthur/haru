@@ -3,7 +3,6 @@ import { montserrat } from '../../components/Fonts'
 
 /**
  * TODO:
- * - Correct display of grades.
  * - Move some code to separate component class.
  * - Correct image on page.
  * - Design and implement skills section
@@ -93,7 +92,7 @@ export default function About() {
                                 <h3 className='mb-2 text-4xl'>{ course.Name }</h3>
                                 <div className='flex pl-2 mb-7'>
                                     <text className='text-2xl'>{ course.CompletionDate }</text>
-                                    
+
                                     {/* Grades will be hidden if below a C; otherwise, they will display the color assigned to them.*/}
                                     <text 
                                         className={`ml-4 text-2xl ${grade[course.LetterGrade] === 'hidden' ? 'hidden' : ''}`}>
