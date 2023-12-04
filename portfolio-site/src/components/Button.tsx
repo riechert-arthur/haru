@@ -17,7 +17,7 @@ interface buttonProps {
 
 export default function Button({ text, extraClassNames }: buttonProps) {
     return (
-        <button className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold tracking-wide ${extraClassNames} ${montserrat.className}`}>
+        <button className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold tracking-wide transition-opacity ${extraClassNames} ${montserrat.className}`}>
             { text }
         </button>
     )
