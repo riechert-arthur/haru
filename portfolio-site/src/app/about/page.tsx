@@ -13,13 +13,17 @@ import { montserrat } from '../../components/Fonts'
  */
 
 /* Information used to display information about classes taken in university. */
-enum Grade {
-    A = 'text-green-500',
-    B = 'text-teal-500',
-    C = 'hidden',
-    D = 'hidden',
-    E = 'hidden',
-    F = 'hidden'
+interface Grade {
+    [key: string]: string
+}
+
+const grade: Grade = {
+    'A': 'text-green-500',
+    'B': 'text-teal-500',
+    'C': 'hidden',
+    'D': 'hidden',
+    'E': 'hidden',
+    'F': 'hidden',
 }
 
 interface Course {
@@ -85,18 +89,16 @@ export default function About() {
                 <div className={`pl-8 pt-1 mt-7 border-2 border-y-transparent border-r-transparent border-l-white font-light ${montserrat.className}`}>
                     {
                         courses.map((course) => (
-                            <div className='mb-14'>
+                            <div className='mt-2'>
                                 <h3 className='mb-2 text-4xl'>{ course.Name }</h3>
                                 <div className='flex pl-2 mb-7'>
                                     <text className='text-2xl'>{ course.CompletionDate }</text>
-
-                                    {/**
-                                     * TODO
-                                     * - Correct display of letter grade colors.
-                                     * - Fix enum key to string.
-                                     * */}
-                                    <text className='ml-4 text-2xl'>Grade: <span className={ Grade[course.LetterGrade] }>{ Grade[course.LetterGrade] }</span></text>
-
+                                    
+                                    {/* Grades will be hidden if below a C; otherwise, they will display the color assigned to them.*/}
+                                    <text 
+                                        className={`ml-4 text-2xl ${grade[course.LetterGrade] === 'hidden' ? 'hidden' : ''}`}>
+                                        Grade: <span className={ grade[course.LetterGrade] }>{ course.LetterGrade }</span>
+                                    </text>
                                 </div>
                                 <ul className='ml-6 text-xl list-disc tracking-wider'>
                                     {
