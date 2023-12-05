@@ -1,11 +1,18 @@
+'use client'
+
 import Image from 'next/image'
 import Button from '../components/Button'
+import { useRouter } from 'next/navigation'
 
 /**
  * @author Arthur Riechert
- * @version 1.0.1
+ * @version 1.1.1
  */
 export default function LandingHero() {
+
+    const router = useRouter()
+    const learnMorePath: string = '/about'
+
     return (
         <div>
             <div className="flex z-10 w-full justify-between items-center font-mono text-sm tracking-wider">
@@ -24,6 +31,7 @@ export default function LandingHero() {
             <Button
                 text='Learn More'
                 extraClassNames='p-6 text-3xl rounded-2xl'
+                functionToCall={() => router.push(learnMorePath)}
             />
         </div>
     )
