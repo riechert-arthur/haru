@@ -7,17 +7,21 @@ import { montserrat } from './Fonts'
  * Other attributes can be set using @extraClassNames in @buttonProps interace.
  *
  * @author Arthur Riechert
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 interface buttonProps {
     text: string
     extraClassNames: string
+    functionToCall: () => any
 }
 
-export default function Button({ text, extraClassNames }: buttonProps) {
+export default function Button({ text, extraClassNames, functionToCall }: buttonProps) {
     return (
-        <button className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold tracking-wide transition-opacity ${extraClassNames} ${montserrat.className}`}>
+        <button
+            className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold tracking-wide transition-opacity ${extraClassNames} ${montserrat.className}`}
+            onClick={functionToCall}
+        >
             { text }
         </button>
     )
