@@ -4,7 +4,6 @@ import { montserrat } from '../../components/Fonts'
 
 /**
  * TODO:
- * - Correct image on page.
  * - Design and implement skills section.
  * - Create external text file for storing course information.
  *
