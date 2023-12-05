@@ -8,6 +8,7 @@ import Button from '../components/Button'
 export default function NavBar() {
 
     const router = useRouter()
+    const resumePath: string = '/resume'
 
     interface NavigationLinks {
         [key: string]: string;
@@ -32,7 +33,7 @@ export default function NavBar() {
                 <Button
                     text='Resumè'
                     extraClassNames='px-4 py-2 rounded-lg text-xl'
-                    functionToCall={() => router.push('/resume')}
+                    functionToCall={() => router.push(resumePath)}
                 />
             </div>
         </nav>
