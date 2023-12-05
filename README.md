@@ -7,8 +7,10 @@ A portfolio website built in React and Next.js.
 ![Landing Design Screenshot](/readme-assets/landing_figma_design_100.png)
 
 ## About Page Design
-### V1.0.0
+### Education V2.0.0
 ![About Design Screenshot](/readme-assets/about_figma_design_200.png)
+### Skills V1.0.0
+![Skills Design Screenshot](/readme-assets/skills_figma_design_100.png)
 
 ## TODO
 - Finish implementation of About (Check code comments for TODOs)
