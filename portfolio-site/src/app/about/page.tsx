@@ -9,7 +9,7 @@ import { montserrat } from '../../components/Fonts'
  * - Create external text file for storing course information.
  *
  * @author Arthur Riechert
- * @version 1.1.0
+ * @version 2.0.0
  */
 
 export default function About() {
@@ -24,14 +24,6 @@ export default function About() {
                 <h3 className='text-xl mb-12'>Computer Science</h3>
                 <h2 className='text-5xl'>Coursework</h2>
                 <CourseList />
-            </div>
-            <div className='w-2/5 h-full overflow-hidden'>
-                <Image 
-                    src='/georgia_tech.jpeg' 
-                    width='1200'
-                    height='800'
-                    alt='The Klaus Advanced Computing Building at Georgia Tech'
-                />
             </div>
         </main>
     )
