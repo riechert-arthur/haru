@@ -21,7 +21,7 @@ export default function About() {
 
     return (
         <main className='flex flex-strat min-h-screen font-mono'>
-            <div className='py-48'>
+            <div className='py-48 w-full'>
                 <div className='flex items-end mb-7'>
                     <h1 className='text-6xl mr-7'>{displaySkills ? 'Skills' : 'Eduation'}</h1>
                     <button className='text-3xl text-gray-400' onClick={() => setDisplay(!displaySkills)}><u>{displaySkills ? 'Education' : 'Skills'}</u>&gt;</button>

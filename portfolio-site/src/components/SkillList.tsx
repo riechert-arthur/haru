@@ -41,7 +41,7 @@ export default function SkillList() {
         },
         {
             Name: 'HTML/CSS',
-            IconPath: '',
+            IconPath: 'html-5.svg',
             Details: {
                 Libraries: ['TailwindCSS']
             }
@@ -63,16 +63,19 @@ export default function SkillList() {
     ]
 
     return (
-        <div className='min-w-full'>
+        <div className='w-full'>
             <text className={`${montserrat.className} text-xl tracking-wider font-light`}><i>Click each skill for more detail.</i></text>
             <div className='mt-7 grid grid-cols-2 gap-6 w-full'>
                 {
                     skillDetails.map((skill: SkillSelection) => (
-                        <div className='p-11 items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl'>
+                        <div className='relative p-11 items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl hover:cursor-pointer hover:scale-105'>
                             <div className='flex overflow-x-scroll'>
                                 <Image width='75' height='75' alt={`${skill.Name} icon.`} src={skill.IconPath} />
                                 <h2 className='ml-6 leading-loose'>{ skill.Name }</h2>
                             </div>
+                            <button className='absolute right-1 bottom-1 -translate-x-1 -translate-y-1'>
+                                <Image width='15' height='15' alt='Expand' src='/arrow-button.svg'/>
+                            </button>
                         </div>
                     ))
                 }
