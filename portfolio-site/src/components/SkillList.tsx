@@ -1,6 +1,10 @@
 import { montserrat } from './Fonts'
 import Image from 'next/image'
 /**
+ * TODO:
+ * - Correct formatting on each skill.
+ * - Add ability to expand boxes for more details.
+ *
  * @author Arthur Riechert
  * @version 1.0.0
  */
@@ -65,9 +69,9 @@ export default function SkillList() {
                 {
                     skillDetails.map((skill: SkillSelection) => (
                         <div className='p-11 items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl'>
-                            <div className='flex'>
+                            <div className='flex overflow-x-scroll'>
                                 <Image width='75' height='75' alt={`${skill.Name} icon.`} src={skill.IconPath} />
-                                <h2 className='ml-10 text-center'>{ skill.Name }</h2>
+                                <h2 className='ml-6 leading-loose'>{ skill.Name }</h2>
                             </div>
                         </div>
                     ))
