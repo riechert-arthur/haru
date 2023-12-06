@@ -83,7 +83,7 @@ const courses: Course[] = [
 
 export default function CourseList() {
     return (
-        <div className={`pl-8 pt-1 mt-7 border-2 border-y-transparent border-r-transparent border-l-white font-light ${montserrat.className}`}>
+        <div className={`pl-8 pr-10 pt-1 mt-7 border-2 border-y-transparent border-r-transparent border-l-white font-light ${montserrat.className}`}>
             {
                 courses.map((course) => (
                     <div className='mt-2 mb-7'>
