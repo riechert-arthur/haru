@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 /**
  * TODO:
- * - Correct use of state to expand boxes.
+ * - Fix grid sizes; all elements on row should not expand at once.
  *
  * @author Arthur Riechert
  * @version 1.0.0
@@ -38,7 +38,8 @@ export default function SkillList() {
             Name: 'Typescript/Javascript',
             IconPath: '/typescript.svg',
             Details: {
-                Frameworks: ['React', 'Next', 'Node']
+                Frameworks: ['React', 'Next'],
+                Software: ['Node']
             },
             Expanded: false
         },
@@ -77,21 +78,36 @@ export default function SkillList() {
                 {
                     skills.map((skill: SkillSelection, index: number) => (
                         <div 
-                            className='relative p-11 h-21 items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl hover:cursor-pointer hover:scale-105'
+                            className={`${skill.Expanded ? '' : 'h-29'} relative p-11 items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl hover:cursor-pointer hover:scale-105`}
                             onClick={() => {
                                 skills[index].Expanded = !skills[index].Expanded
                                 setSkills([...skills])
                                 console.log(skill.Expanded)
                             }}
                         >
-                            <div className={`flex overflow-x-scroll ${skill.Expanded ? '' : 'h-20'}`}>
+                            <div className='flex overflow-x-scroll'>
                                 <Image width='75' height='75' alt={`${skill.Name} icon.`} src={skill.IconPath} />
                                 <h2 className='ml-6 leading-loose translate-y-1'>{ skill.Name }</h2>
                             </div>
-                            <div className={`${skill.Expanded ? '' : 'hidden'}`}>
-                                {skill.Details.Software?.map((software) => {return <text>{ software }</text>})}
-                                {skill.Details.Libraries?.map((library) => {return <text>{ library }</text>})}
-                                {skill.Details.Frameworks?.map((framework) => {return <text>{ framework }</text>})}
+                            <div className={`mt-6 ${montserrat.className} ${skill.Expanded ? '' : 'hidden'}`}>
+                                <text className={`text-3xl ${skill.Details.Software ? '' : 'hidden'}`}>Software</text>
+                                <ul className='pl-2 ml-1 border-l'>
+                                    {skill.Details.Software?.map((software) => {
+                                        return <li className='text-2xl font-light'>{ software }</li>
+                                    })}
+                                </ul>
+                                <text className={`text-3xl ${skill.Details.Libraries ? '' : 'hidden'}`}>Libraries</text>
+                                <ul className='pl-2 ml-1 border-l'>
+                                    {skill.Details.Libraries?.map((library) => {
+                                        return <li className='text-2xl font-light'>{ library }</li>
+                                    })}
+                                </ul>
+                                <text className={`text-3xl ${skill.Details.Frameworks ? '' : 'hidden'}`}>Frameworks</text>
+                                <ul className='pl-2 ml-1 border-l'>
+                                    {skill.Details.Frameworks?.map((framework) => {
+                                        return <li className='text-2xl font-light'>{ framework }</li>
+                                    })}
+                                </ul>
                             </div>
                             <button 
                                 className='absolute right-1 bottom-1 -translate-x-1 -translate-y-1'
