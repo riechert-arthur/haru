@@ -76,21 +76,29 @@ export default function SkillList() {
             <div className='mt-7 grid grid-cols-2 gap-6 w-full'>
                 {
                     skills.map((skill: SkillSelection, index: number) => (
-                        <div className='relative p-11 items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl hover:cursor-pointer hover:scale-105'>
+                        <div 
+                            className='relative p-11 h-21 items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl hover:cursor-pointer hover:scale-105'
+                            onClick={() => {
+                                skills[index].Expanded = !skills[index].Expanded
+                                setSkills([...skills])
+                                console.log(skill.Expanded)
+                            }}
+                        >
                             <div className={`flex overflow-x-scroll ${skill.Expanded ? '' : 'h-20'}`}>
                                 <Image width='75' height='75' alt={`${skill.Name} icon.`} src={skill.IconPath} />
                                 <h2 className='ml-6 leading-loose translate-y-1'>{ skill.Name }</h2>
-                                <div className={`${skill.Expanded ? '' : 'hidden'}`}>
-                                    <h2>Hello</h2>
-                                </div>
+                            </div>
+                            <div className={`${skill.Expanded ? '' : 'hidden'}`}>
+                                {skill.Details.Software?.map((software) => {return <text>{ software }</text>})}
+                                {skill.Details.Libraries?.map((library) => {return <text>{ library }</text>})}
+                                {skill.Details.Frameworks?.map((framework) => {return <text>{ framework }</text>})}
                             </div>
                             <button 
                                 className='absolute right-1 bottom-1 -translate-x-1 -translate-y-1'
                                 onClick={() => {
-                                    var temp: boolean = skills[index].Expanded
-                                    skills[index].Expanded = !temp
-                                    setSkills(skills)
-                                    console.log(skills[index].Expanded)
+                                    skills[index].Expanded = !skills[index].Expanded
+                                    setSkills([...skills])
+                                    console.log(skill.Expanded)
                                 }}
                             >
                                 <Image width='15' height='15' alt='Expand' src='/arrow-button.svg'/>
