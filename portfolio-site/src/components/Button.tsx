@@ -1,4 +1,5 @@
 import { montserrat } from './Fonts'
+import Image from 'next/image'
 
 /**
  * A template for buttons with shared color and font effects.
@@ -11,18 +12,20 @@ import { montserrat } from './Fonts'
  */
 
 interface buttonProps {
+    children: React.ReactNode
     text: string
     extraClassNames: string
     functionToCall: () => any
 }
 
-export default function Button({ text, extraClassNames, functionToCall }: buttonProps) {
+export default function Button({ children, text, extraClassNames, functionToCall }: buttonProps) {
     return (
         <button
             className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold tracking-wide transition-opacity ${extraClassNames} ${montserrat.className}`}
             onClick={functionToCall}
         >
             { text }
+            { children }
         </button>
     )
 }
