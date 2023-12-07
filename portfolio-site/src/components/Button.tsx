@@ -12,7 +12,7 @@ import Image from 'next/image'
  */
 
 interface buttonProps {
-    children: React.ReactNode
+    children?: React.ReactNode
     text: string
     extraClassNames: string
     functionToCall: () => any
