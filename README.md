@@ -9,8 +9,10 @@ A portfolio website built in React and Next.js.
 ## About Page Design
 ### Education V2.0.0
 ![About Design Screenshot](/readme-assets/about_figma_design_200.png)
-### Skills V2.0.0
+### Skills V1.1.0
 ![Skills Design Screenshot](/readme-assets/skills_figma_design_200.png)
+### Projects V1.0.0
+![Projects Design Screenshot](/readme-assets/projects_figma_design_100.png)
 
 ## TODO
 - Finish implementation of SkillsList for About (Check code comments for TODOs)
