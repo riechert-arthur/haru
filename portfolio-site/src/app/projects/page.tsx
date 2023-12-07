@@ -6,6 +6,17 @@ import Button from '../../components/Button'
 import Link from 'next/link'
 import Image from 'next/image'
 
+/**
+ * A page to store projects, so visitors can interact with them.
+ *
+ * TODO:
+ * - Add Tailwind formatting.
+ * - Add separate pages for each project.
+ *
+ * @author Arthur Riechert
+ * @version 1.0.0
+ */
+
 interface Project {
     Title: string
     Description: string
