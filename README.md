@@ -15,8 +15,9 @@ A portfolio website built in React and Next.js.
 ![Projects Design Screenshot](/readme-assets/projects_figma_design_100.png)
 
 ## TODO
-- Finish implementation of SkillsList for About (Check code comments for TODOs)
+- Implement Projects page.
 - Add loading animations for navbar and hero.
-- Design and implement Projects, Experience, and Contact pages.
+- Design and implement Experience and Contact pages.
+- Implement external content storage.
 - Implement chatbot.
 - Add footer
