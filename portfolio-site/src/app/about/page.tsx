@@ -8,7 +8,6 @@ import { useState } from 'react'
 
 /**
  * TODO:
- * - Design and implement skills section.
  * - Create external text file for storing course information.
  *
  * @author Arthur Riechert
