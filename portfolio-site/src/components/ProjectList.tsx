@@ -49,16 +49,18 @@ export default function ProjectList({}) {
     ]
 
     return (
-        <div className='grid grid-cols-2 gap-6'>
+        <div className='mt-10 grid grid-cols-2 gap-7'>
             {
                 projects.map(project => (
                     <div className={`${montserrat.className}`}>
 
-                        {/* Add Image up here. */}
+                        <div className='w-full h-96 overflow-hidden rounded-2xl'>
+                            <img src='placeholder.jpg' alt={`${project.Title} thumbnail.`} className='' />
+                        </div>
 
-                        <h2>{ project.Title }</h2>
-                        <p>{ project.Description }</p>
-                        <div className='flex'>
+                        <h2 className={`mt-6 ${montserrat.className} text-4xl`}>{ project.Title }</h2>
+                        <p className='mt-2 font-light text-xl'>{ project.Description }</p>
+                        <div className='flex mt-6 mb-2'>
                             <Button
                                 text='Read More'
                                 extraClassNames='px-4 py-2 rounded-lg text-xl'
@@ -66,7 +68,7 @@ export default function ProjectList({}) {
                             />
                             <Button
                                 text='View Website'
-                                extraClassNames='px-4 py-2 rounded-lg text-xl'
+                                extraClassNames='ml-5 px-4 py-2 rounded-lg text-xl'
                                 functionToCall={() => router.push(project.ViewWebsiteURL)}
                             >
                                 <Image src='full-screen.svg' width='24' height='24' alt='Github icon'></Image>
