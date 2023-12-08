@@ -5,6 +5,11 @@ import { montserrat } from './Fonts'
 import Button from './Button'
 import Image from 'next/image'
 
+/**
+ * @author Arthur Riechert
+ * @version 1.0.0
+ */
+
 interface Project {
     Title: string
     Description: string
