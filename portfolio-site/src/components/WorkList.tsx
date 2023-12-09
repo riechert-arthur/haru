@@ -9,14 +9,14 @@ import { montserrat } from './Fonts'
 
 /* Information used to display information about previous jobs. */
 
-interface Course {
+interface Job {
     Employer: string,
     Date: string,
     Role: string,
     Description: string[],
 }
 
-const courses: Course[] = [
+const jobs: Job[] = [
     {
         Employer: 'Reworkd AI',
         Date: 'May 2023 - August 2023',
@@ -49,7 +49,7 @@ export default function WorkList() {
     return (
         <div className={`pl-8 pr-10 pt-1 mt-7 border-2 border-y-transparent border-r-transparent border-l-white font-light ${montserrat.className}`}>
             {
-                courses.map(job => (
+                jobs.map(job => (
                     <div className='mt-2 mb-7'>
                         <h3 className='mb-2 text-4xl'>{ job.Employer }</h3>
                         <div className='flex flex-col mb-7'>
