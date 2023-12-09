@@ -7,7 +7,6 @@ import { montserrat } from '../../components/Fonts'
  * A page to store projects, so visitors can interact with them.
  *
  * TODO:
- * - Add Tailwind formatting.
  * - Add separate pages for each project.
  *
  * @author Arthur Riechert
