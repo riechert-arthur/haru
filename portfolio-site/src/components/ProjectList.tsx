@@ -6,6 +6,9 @@ import Button from './Button'
 import Image from 'next/image'
 
 /**
+ * TODO List:
+ * - Add ability to click images.
+ *
  * @author Arthur Riechert
  * @version 1.0.0
  */
