@@ -1,9 +1,7 @@
 'use client'
 
-import Image from 'next/image'
 import CourseList from '../../components/CourseList'
 import SkillList from '../../components/SkillList'
-import { montserrat } from '../../components/Fonts'
 import { useState } from 'react'
 
 /**
