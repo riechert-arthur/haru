@@ -15,13 +15,16 @@ A portfolio website built in React and Next.js.
 ![Projects Design Screenshot](/readme-assets/projects_figma_design_100.png)
 ### Experience V1.0.0
 ![Experience Design Screenshot](/readme-assets/experience_figma_design_100.png)
+### Contact V1.0.0
+![Contact Design Screenshot](/readme-assets/contact_figma_design_100.png)
 
 ## TODO
 - Add clubs & extracurriculars to About.
 - Add individual project pages.
+- Add dark mode.
 - Add loading animations for navbar and hero.
 - Add PDF resume.
-- Design and implement Content page
+- Implement Contact page
 - Implement external content storage.
 - Implement chatbot.
 - Add footer
