@@ -27,12 +27,12 @@ export default function NavBar() {
             <div className='flex items-center justify-between'>
                 {
                     Object.keys(navigationLinks).map((key) => (
-                        <Link className='mr-7 text-xl tracking-wide hover:text-gray-400' href={navigationLinks[key]}>{key}</Link>
+                        <Link className={`mr-7 text-xl tracking-wide hover:text-gray-400 ${montserrat.className} font-light`} href={navigationLinks[key]}>{key}</Link>
                     ))
                 }
                 <Button
                     text='Resumè'
-                    extraClassNames='px-4 py-2 rounded-lg text-xl'
+                    extraClassNames={`px-4 py-2 rounded-lg text-xl ${montserrat.className}`}
                     functionToCall={() => router.push(resumePath)}
                 />
             </div>
