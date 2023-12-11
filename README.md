@@ -22,6 +22,7 @@ A portfolio website built in React and Next.js.
 - Add clubs & extracurriculars to About.
 - Add individual project pages.
 - Add dark mode.
+- Add breakpoints.
 - Add loading animations for navbar and hero.
 - Add PDF resume.
 - Implement external content storage.
