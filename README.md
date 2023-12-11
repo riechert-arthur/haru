@@ -24,7 +24,6 @@ A portfolio website built in React and Next.js.
 - Add dark mode.
 - Add loading animations for navbar and hero.
 - Add PDF resume.
-- Implement Contact page
 - Implement external content storage.
 - Implement chatbot.
 - Add footer
