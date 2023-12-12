@@ -17,6 +17,8 @@ A portfolio website built in React and Next.js.
 ![Experience Design Screenshot](/readme-assets/experience_figma_design_100.png)
 ### Contact V1.0.0
 ![Contact Design Screenshot](/readme-assets/contact_figma_design_100.png)
+### Project Details V1.0.0
+![Project Details Design Screenshot](/readme-assets/project_details_digma_design_100.png)
 
 ## TODO
 - Add clubs & extracurriculars to About.
