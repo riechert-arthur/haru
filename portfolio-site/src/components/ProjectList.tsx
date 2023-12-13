@@ -16,7 +16,7 @@ import Image from 'next/image'
 interface Project {
     Title: string
     Description: string
-    ReadMoreURL: string
+    Slug: string
     ViewWebsiteURL: string
 }
 
@@ -28,25 +28,25 @@ export default function ProjectList({}) {
         {
             Title: 'Portfolio Site',
             Description: 'A centralized website to house my qualifications and showcase my projects to potential clients and employers.',
-            ReadMoreURL: '',
+            Slug: 'portfolio-site',
             ViewWebsiteURL: '',
         },
         {
             Title: 'Abstract Data Type Library',
             Description: 'A custom-built, idiomatic Java library for creating a variety of abstract data types such as linked lists and hash maps to use with sorting algorithms.',
-            ReadMoreURL: '',
+            Slug: '',
             ViewWebsiteURL: '',
         },
         {
             Title: 'Portfolio Site',
             Description: 'A centralized website to house my qualifications and showcase my projects to potential clients and employers.',
-            ReadMoreURL: '',
+            Slug: '',
             ViewWebsiteURL: '',
         },
         {
             Title: 'Abstract Data Type Library',
             Description: 'A custom-built, idiomatic Java library for creating a variety of abstract data types such as linked lists and hash maps to use with sorting algorithms.',
-            ReadMoreURL: '',
+            Slug: '',
             ViewWebsiteURL: '',
         },
     ]
@@ -67,7 +67,7 @@ export default function ProjectList({}) {
                             <Button
                                 text='Read More'
                                 extraClassNames='px-4 py-2 rounded-lg text-xl'
-                                functionToCall={() => router.push(project.ReadMoreURL)}
+                                functionToCall={() => router.push(`/projects/${ project.Slug }`)}
                             />
                             <Button
                                 text='View Website'
