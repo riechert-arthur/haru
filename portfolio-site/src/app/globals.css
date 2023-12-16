@@ -19,3 +19,11 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+.markdown h1 {
+  @apply text-5xl font-mono;
+}
+
+.markdown ul {
+  @apply mt-5 mb-6 text-2xl ml-7 list-disc;
+}
