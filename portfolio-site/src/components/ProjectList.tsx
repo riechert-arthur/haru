@@ -1,81 +1,52 @@
-'use client'
-
-import { useRouter } from 'next/navigation'
 import { montserrat } from './Fonts'
-import Button from './Button'
 import Image from 'next/image'
+import { ProjectMetadata, getProjectMetadata } from '../../lib/projects'
+import Link from 'next/link'
 
 /**
  * TODO List:
  * - Add ability to click images.
  *
  * @author Arthur Riechert
- * @version 1.0.0
+ * @version 1.1.0
  */
 
-interface Project {
-    Title: string
-    Description: string
-    Slug: string
-    ViewWebsiteURL: string
-}
-
-export default function ProjectList({}) {
-
-    const router = useRouter()
-
-    const projects: Project[] = [
-        {
-            Title: 'Portfolio Site',
-            Description: 'A centralized website to house my qualifications and showcase my projects to potential clients and employers.',
-            Slug: 'portfolio-site',
-            ViewWebsiteURL: '',
-        },
-        {
-            Title: 'Abstract Data Type Library',
-            Description: 'A custom-built, idiomatic Java library for creating a variety of abstract data types such as linked lists and hash maps to use with sorting algorithms.',
-            Slug: '',
-            ViewWebsiteURL: '',
-        },
-        {
-            Title: 'Portfolio Site',
-            Description: 'A centralized website to house my qualifications and showcase my projects to potential clients and employers.',
-            Slug: '',
-            ViewWebsiteURL: '',
-        },
-        {
-            Title: 'Abstract Data Type Library',
-            Description: 'A custom-built, idiomatic Java library for creating a variety of abstract data types such as linked lists and hash maps to use with sorting algorithms.',
-            Slug: '',
-            ViewWebsiteURL: '',
-        },
-    ]
+export default function ProjectList() {
+    
+    const projectMetadata: ProjectMetadata[] = getProjectMetadata()
 
     return (
         <div className='mt-10 grid grid-cols-2 gap-7'>
             {
-                projects.map(project => (
+                projectMetadata.map(data => (
                     <div className={`${montserrat.className}`}>
 
                         <div className='w-full h-96 overflow-hidden rounded-2xl'>
-                            <img src='placeholder.jpg' alt={`${project.Title} thumbnail.`} className='' />
+                            <img src='placeholder.jpg' alt={`${ data.title } thumbnail.`} className='' />
                         </div>
 
-                        <h2 className={`mt-6 ${montserrat.className} text-4xl`}>{ project.Title }</h2>
-                        <p className='mt-2 font-light text-xl'>{ project.Description }</p>
+                        <h2 className={`mt-6 ${montserrat.className} text-4xl`}>{ data.title }</h2>
+                        <p className='mt-2 font-light text-xl'>{ data.title }</p>
                         <div className='flex mt-6 mb-2'>
-                            <Button
-                                text='Read More'
-                                extraClassNames='px-4 py-2 rounded-lg text-xl'
-                                functionToCall={() => router.push(`/projects/${ project.Slug }`)}
-                            />
-                            <Button
-                                text='View Website'
-                                extraClassNames='ml-5 px-4 py-2 rounded-lg text-xl'
-                                functionToCall={() => router.push(project.ViewWebsiteURL)}
+                            <div 
+                                className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold
+                                    tracking-wide transition-opacity rounded-lg text-xl
+                                    ${montserrat.className}`}
                             >
-                                <Image src='full-screen.svg' width='24' height='24' alt='Github icon'></Image>
-                            </Button>
+                                <div className='flex'>
+                                    <Link className='px-4 py-2' href={`/projects/${ data.slug }`} >Read More</Link>
+                                </div>
+                            </div>
+                            <div 
+                                className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold
+                                    tracking-wide transition-opacity ml-5 px-4 rounded-lg text-xl
+                                    ${montserrat.className}`}
+                            >
+                                <div className='flex'>
+                                    <Link className='py-2' href={ data.slug }>View</Link>
+                                    <Image className='ml-1' src='full-screen.svg' width='24' height='24' alt='Github icon'></Image>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 ))
