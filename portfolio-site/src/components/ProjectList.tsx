@@ -26,7 +26,7 @@ export default function ProjectList() {
                         </div>
 
                         <h2 className={`mt-6 ${montserrat.className} text-4xl`}>{ data.title }</h2>
-                        <p className='mt-2 font-light text-xl'>{ data.title }</p>
+                        <p className='mt-2 font-light text-xl'>{ data.description }</p>
                         <div className='flex mt-6 mb-2'>
                             <div 
                                 className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold
@@ -43,7 +43,7 @@ export default function ProjectList() {
                                     ${montserrat.className}`}
                             >
                                 <div className='flex'>
-                                    <Link className='py-2' href={ data.slug }>View</Link>
+                                    <Link className='py-2' href={ data.live }>View</Link>
                                     <Image className='ml-1' src='full-screen.svg' width='24' height='24' alt='Github icon'></Image>
                                 </div>
                             </div>
