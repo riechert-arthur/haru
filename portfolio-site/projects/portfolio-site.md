@@ -1,7 +1,22 @@
 ---
 title: Portfolio Site
 date: November 29, 2023
-description: A centralized website to house my qualifications and showcase my projects to potential clients and employers.
+description: A simple portfolio website built using React, Next, and TailwindCSS to showcase demos of projects and explain the skills and technologies behind them. 
 github: https://github.com/riechert-arthur/portfolio-site-react-next
 live: /
 ---
+
+# Challenges
+- Static Rendering
+- Dynamic Routing
+- Web Design
+- Responsiveness
+- Deployment
+# Skills & Technologies
+- Typescript
+- TailwindCSS
+- React
+- Next
+- Vercel
+- Figma
+- Git & Github
