@@ -4,9 +4,6 @@ import { ProjectMetadata, getProjectMetadata } from '../../lib/projects'
 import Link from 'next/link'
 
 /**
- * TODO List:
- * - Add ability to click images.
- *
  * @author Arthur Riechert
  * @version 1.1.0
  */
