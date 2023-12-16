@@ -17,8 +17,8 @@ A portfolio website built in React and Next.js.
 ![Experience Design Screenshot](/readme-assets/experience_figma_design_100.png)
 ## Contact V1.0.0
 ![Contact Design Screenshot](/readme-assets/contact_figma_design_100.png)
-## Project Details V1.0.0
-![Project Details Design Screenshot](/readme-assets/project_details_figma_design_100.png)
+## Project Details V1.0.1
+![Project Details Design Screenshot](/readme-assets/project_details_figma_design_101.png)
 
 ## TODO
 - Add clubs & extracurriculars to About.
@@ -28,6 +28,5 @@ A portfolio website built in React and Next.js.
 - Add loading animations for navbar and hero.
 - Add skill tags
 - Ability to click on skill to find relevant projects.
-- Implement external content storage.
 - Implement chatbot.
 - Add footer
