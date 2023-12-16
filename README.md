@@ -22,7 +22,7 @@ A portfolio website built in React and Next.js.
 
 ## TODO
 - Add clubs & extracurriculars to About.
-- Add individual project pages.
+- Add formatting to individual project pages.
 - Add dark mode.
 - Add breakpoints.
 - Add loading animations for navbar and hero.
