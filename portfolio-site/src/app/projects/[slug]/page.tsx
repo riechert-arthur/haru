@@ -13,24 +13,26 @@ export default async function Page( { params }: { params: { slug: string } }) {
     const data: ProjectData = await getProjectData(params.slug)
 
     return (
-        <main className={`flex flex-col py-48 w-full ${montserrat.className}`}>
-            <h2 className='text-6xl font-mono'>{ data.metadata.title }</h2>
-            <text className={`mt-2 text-3xl font-light `}><i>{ data.metadata.date }</i></text>
-            <div className='flex mt-1'>
-                <div className='flex'>
-                    <Image src='/github.svg' alt='Github logo' width='25' height='25'></Image>
-                    <Link className='ml-2 text-2xl font-extralight' href={ data.metadata.github }><i><u>Github</u></i></Link>
+        <main className={`flex flex-col pb-24 w-full ${montserrat.className}`}>
+            <div className='py-48'>
+                <h2 className='text-6xl font-mono'>{ data.metadata.title }</h2>
+                <text className={`mt-2 text-3xl font-light `}><i>{ data.metadata.date }</i></text>
+                <div className='flex mt-1'>
+                    <div className='flex'>
+                        <Image src='/github.svg' alt='Github logo' width='25' height='25'></Image>
+                        <Link className='ml-2 text-2xl font-extralight' href={ data.metadata.github }><i><u>Github</u></i></Link>
+                    </div>
+                    <div className='flex'>
+                        <Image className='ml-4' src='/full-screen.svg' alt='Github logo' width='25' height='25'></Image>
+                        <Link className='ml-2 text-2xl font-extralight' href={ data.metadata.live }><i><u>Live Website</u></i></Link>
+                    </div>
                 </div>
-                <div className='flex'>
-                    <Image className='ml-4' src='/full-screen.svg' alt='Github logo' width='25' height='25'></Image>
-                    <Link className='ml-2 text-2xl font-extralight' href={ data.metadata.live }><i><u>Live Website</u></i></Link>
+                <p className='mt-2 font-light text-2xl'>{ data.metadata.description }</p>
+                <div className='flex mt-8 w-full justify-center items-center'>
+                    <iframe className='shadow-2xl rounded-3xl' src={ data.metadata.live } width='1335' height='740'></iframe>
                 </div>
+                <div className={`markdown mt-12 ${montserrat.className} font-light`} dangerouslySetInnerHTML={{ __html: data.html }}></div>
             </div>
-            <p className='mt-2 font-light text-2xl'>{ data.metadata.description }</p>
-            <div className='flex mt-8 w-full justify-center items-center'>
-                <iframe className='shadow-2xl rounded-3xl' src={ data.metadata.live } width='1335' height='740'></iframe>
-            </div>
-            <div className={`markdown mt-12 ${montserrat.className} font-light`} dangerouslySetInnerHTML={{ __html: data.html }}></div>
         </main>
     )
 }

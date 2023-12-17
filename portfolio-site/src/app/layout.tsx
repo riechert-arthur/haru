@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import NavBar from '../components/NavBar'
+import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
 import './globals.css'
 
 /**
@@ -25,9 +26,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`bg-slate-800 ${inter.className}`}>
         <NavBar></NavBar>
-        <div className='px-48'>
+        <div className='z-10 px-48'>
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   )
