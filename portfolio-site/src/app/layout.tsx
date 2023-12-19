@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: 'Arthur Riechert',
   description: `Computer science student and aspiring software
                 engineer at Georgia Institute of Technology.`,
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
@@ -24,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-slate-800 ${inter.className}`}>
+      <body className={`overflow-x-hidden bg-slate-800 ${inter.className}`}>
         <NavBar></NavBar>
         <div className='z-10 px-48'>
           {children}
