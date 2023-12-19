@@ -18,8 +18,8 @@ export default function ProjectList() {
                 projectMetadata.map(data => (
                     <div className={`${montserrat.className}`}>
 
-                        <div className='w-full h-96 overflow-hidden rounded-2xl'>
-                            <img src='placeholder.jpg' alt={`${ data.title } thumbnail.`} className='' />
+                        <div className='w-full h-96 overflow-hidden rounded-2xl shadow-2xl'>
+                            <img src={ data.thumbnail } alt={`${ data.title } thumbnail.`} className='' />
                         </div>
 
                         <h2 className={`mt-6 ${montserrat.className} text-4xl`}>{ data.title }</h2>

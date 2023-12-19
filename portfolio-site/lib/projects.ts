@@ -18,6 +18,7 @@ export interface ProjectMetadata {
     description: string
     github: string
     live: string
+    thumbnail: string
 }
 
 export interface ProjectData {
@@ -41,7 +42,7 @@ export function getProjectMetadata(): ProjectMetadata[] {
 
         return {
             slug: slug,
-            ...(parsedResults.data as { title: string, date: string, description: string, github: string, live: string })
+            ...(parsedResults.data as { title: string, date: string, description: string, github: string, live: string, thumbnail: string })
         }
     })
 
@@ -66,7 +67,7 @@ export async function getProjectData(slug: string): Promise<ProjectData> {
     return {
         metadata: {
             slug,
-            ...(parsedResults.data as { title: string, date: string, description: string, github: string, live: string }),
+            ...(parsedResults.data as { title: string, date: string, description: string, github: string, live: string, thumbnail: string }),
         },
         html: htmlContent
     }
