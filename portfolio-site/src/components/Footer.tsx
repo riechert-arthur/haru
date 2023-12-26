@@ -41,10 +41,10 @@ const internalLinks: InternalLink[] = [
 export default function Footer() {
 
     return (
-        <footer className="flex flex-col mt-2 md:-mt-60 w-full">
+        <footer className="flex flex-col overflow-x-hidden md:-mt-60 w-full">
             <img className='w-full object-cover' src='/footer-waves.svg'></img>
-            <div className='py-2 bg-sky-400'>
-                <div className='flex w-full justify-center'>
+            <div className='flex flex-col p-2 w-full items-center py-2 bg-sky-400'>
+                <div className='flex w-2/5 justify-between'>
                     {
                         socials.map((social: SocialLink, index: number) => (
                             <Link
@@ -54,7 +54,6 @@ export default function Footer() {
                             >
                                 <button>
                                     <Image
-                                        className='ml-6'
                                         src={ social.icon }
                                         width='40'
                                         height='40'
@@ -65,14 +64,14 @@ export default function Footer() {
                         ))
                     }
                 </div>
-                <div className={`flex md:mt-3 justify-center
+                <div className={`flex flex-wrap justify-center md:flex-row md:mt-3 md:justify-between
                     text-2xl font-extralight ${montserrat.className}`
                 }>
                     {
                         internalLinks.map((link: InternalLink, index: number) => (
                             <Link
+                                className='mr-4 md:mr-0'
                                 href={ link.route }
-                                className='ml-6'
                                 key={ index }
                             >
                                 { link.name }

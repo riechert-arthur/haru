@@ -24,7 +24,7 @@ export default function Button({ children, text, extraClassNames, functionToCall
             className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold tracking-wide transition-opacity ${extraClassNames} ${montserrat.className}`}
             onClick={functionToCall}
         >
-            <div className='flex'>
+            <div className='flex justify-center'>
                 { text }
                 { children }
             </div>

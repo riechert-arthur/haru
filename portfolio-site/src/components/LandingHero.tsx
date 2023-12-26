@@ -19,16 +19,16 @@ export default function LandingHero() {
                 items-center font-mono text-sm tracking-wider`
             }>
                 <div className='flex flex-col w-full justify-center items-center'>
-                    <h1 className='w-full text-5xl text-center'>Software Engineer</h1>
+                    <h1 className='w-full text-5xl md:text-5xl text-center'>Software Engineer</h1>
                     <Image
                         src='/head_shot.jpeg'
-                        width='300'
-                        height='300'
+                        width='150'
+                        height='150'
                         alt='Picture of Arthur'
-                        className='md:hidden md:ml-40 md:mr-12 w-96 h-96 bg-red-200 rounded-full shadow-2xl'
+                        className='mt-8 md:hidden md:ml-40 md:mr-12 w-96 h-96 bg-red-200 rounded-full shadow-2xl'
                     />
                     <div className="flex max-w-4xl">
-                        <p className='mt-14 text-2xl leading-8 tracking-widest leading-relaxed'>
+                        <p className='mt-14 text-2xl text-center md:text-left leading-8 tracking-widest leading-relaxed'>
                             Hi, my name is Arthur. I am a computer science 
                             student and aspiring software engineer from
                             Georgia Institute of Technology.
@@ -45,7 +45,7 @@ export default function LandingHero() {
             </div>
             <Button
                 text='Learn More'
-                extraClassNames='p-6 text-3xl rounded-2xl'
+                extraClassNames='mt-12 md:mt-0 p-6 text-3xl rounded-2xl c'
                 functionToCall={() => router.push(learnMorePath)}
             />
         </div>
