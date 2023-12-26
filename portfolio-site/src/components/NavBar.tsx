@@ -28,12 +28,28 @@ export default function NavBar() {
     const router = useRouter()
 
     return (
-        <nav className='flex items-center justify-between px-11 py-4 bg-slate-900/60'>
-            <Link href='/' className={`text-2xl tracking-wide ${montserrat.className} hover:text-gray-400 hover:scale-105`}>Arthur Riechert</Link>
-            <div className='flex items-center justify-between'>
+        <nav 
+            className={`overflow-hidden flex items-center justify-between
+                w-full px-2 md:px-11 py-4 bg-slate-900/60`
+            }>
+            <Link
+                className={ `hidden md:inline text-2xl tracking-wide
+                    ${montserrat.className} hover:text-gray-400 hover:scale-105`}
+                href='/'
+            >
+                Arthur Riechert
+            </Link>
+            <div className='flex items-center justify-between w-1/2 md:w-2/5'>
                 {
                     Object.keys(navigationLinks).map((key: string, index: number) => (
-                        <Link key={ index } className={`mr-7 text-xl tracking-wide hover:text-gray-400 ${montserrat.className} font-light`} href={navigationLinks[key]}>{key}</Link>
+                        <Link
+                            key={ index }
+                            className={`text-xl tracking-wide hover:text-gray-400
+                                ${montserrat.className} font-light`}
+                            href={navigationLinks[key]}
+                        >
+                            { key }
+                        </Link>
                     ))
                 }
                 <Button

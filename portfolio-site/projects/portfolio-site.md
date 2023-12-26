@@ -16,6 +16,7 @@ thumbnail: /site-portfolio-thumbnail.png
 # Skills & Technologies
 - Typescript
 - TailwindCSS
+- Node
 - React
 - Next
 - Vercel

@@ -41,29 +41,52 @@ const internalLinks: InternalLink[] = [
 export default function Footer() {
 
     return (
-        <footer className="-mt-60 w-full">
+        <footer className="flex flex-col mt-2 md:-mt-60 w-full">
             <img className='w-full object-cover' src='/footer-waves.svg'></img>
             <div className='py-2 bg-sky-400'>
                 <div className='flex w-full justify-center'>
                     {
                         socials.map((social: SocialLink, index: number) => (
-                            <Link key={ index } href={ social.url } target='_blank'>
+                            <Link
+                                key={ index }
+                                href={ social.url }
+                                target='_blank'
+                            >
                                 <button>
-                                    <Image className='ml-6' src={ social.icon } width='40' height='40' alt={`${social.name} logo`} />
+                                    <Image
+                                        className='ml-6'
+                                        src={ social.icon }
+                                        width='40'
+                                        height='40'
+                                        alt={`${social.name} logo`}
+                                    />
                                 </button>
                             </Link>
                         ))
                     }
                 </div>
-                <div className={`flex mt-3 justify-center text-2xl font-extralight ${montserrat.className}`}>
+                <div className={`flex md:mt-3 justify-center
+                    text-2xl font-extralight ${montserrat.className}`
+                }>
                     {
                         internalLinks.map((link: InternalLink, index: number) => (
-                            <Link key={ index } className='ml-6' href={ link.route }>{ link.name }</Link>
+                            <Link
+                                href={ link.route }
+                                className='ml-6'
+                                key={ index }
+                            >
+                                { link.name }
+                            </Link>
                         ))
                     }
                 </div>
                 <div className='flex w-full justify-center'>
-                    <text className={`mt-20 text-lg font-light ${montserrat.className}`}>©2023 Arthur Riechert | All Rights Reserved</text>
+                    <text
+                        className={`mt-20 text-lg font-light
+                            ${montserrat.className}`
+                    }>
+                        ©2023 Arthur Riechert | All Rights Reserved
+                    </text>
                 </div>
             </div>          
         </footer>

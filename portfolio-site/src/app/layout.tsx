@@ -29,9 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`overflow-x-hidden bg-slate-800 ${inter.className}`}>
         <NavBar></NavBar>
-        <div className='z-10'>
-          {children}
-        </div>
+        {children}
         <Footer />
       </body>
     </html>

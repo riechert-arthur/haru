@@ -14,10 +14,19 @@ export default function LandingHero() {
     const learnMorePath: string = '/about'
 
     return (
-        <div>
-            <div className="flex z-10 w-full justify-between items-center font-mono text-sm tracking-wider">
-                <div>
-                    <h1 className='text-5xl'>Software Engineer</h1>
+        <div className='flex flex-col w-full'>
+            <div className={`flex flex-col md:flex-row w-full md:justify-between
+                items-center font-mono text-sm tracking-wider`
+            }>
+                <div className='flex flex-col w-full justify-center items-center'>
+                    <h1 className='w-full text-5xl text-center'>Software Engineer</h1>
+                    <Image
+                        src='/head_shot.jpeg'
+                        width='300'
+                        height='300'
+                        alt='Picture of Arthur'
+                        className='md:hidden md:ml-40 md:mr-12 w-96 h-96 bg-red-200 rounded-full shadow-2xl'
+                    />
                     <div className="flex max-w-4xl">
                         <p className='mt-14 text-2xl leading-8 tracking-widest leading-relaxed'>
                             Hi, my name is Arthur. I am a computer science 
@@ -26,7 +35,13 @@ export default function LandingHero() {
                         </p>
                     </div>
                 </div>
-                <Image src='/head_shot.jpeg' width='300' height='300' alt='Picture of Arthur' className='ml-40 mr-12 w-96 h-96 bg-red-200 rounded-full shadow-2xl'/>
+                <Image 
+                    src='/head_shot.jpeg'
+                    width='300'
+                    height='300'
+                    alt='Picture of Arthur'
+                    className='hidden md:inline ml-40 mr-12 w-96 h-96 bg-red-200 rounded-full shadow-2xl'
+                />
             </div>
             <Button
                 text='Learn More'

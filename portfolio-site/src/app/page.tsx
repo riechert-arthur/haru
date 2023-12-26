@@ -6,7 +6,10 @@ import LandingHero from "../components/LandingHero"
  */
 export default function Home() {
   return (
-    <main className="min-h-screen px-48 py-60 bg-polygon-scatter bg-cover bg-no-repeat bg-[right_-42rem_top_-3rem]">
+    <main className={ `w-full overflow-x-hidden min-h-screen px-20 md:px-48 py-40
+      md:py-60 md:bg-polygon-scatter md:bg-cover 
+      md:bg-no-repeat md:bg-[right_-42rem_top_-3rem]`
+    }>
       <LandingHero></LandingHero>
     </main>
   )
