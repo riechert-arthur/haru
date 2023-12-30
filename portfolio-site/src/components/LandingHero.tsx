@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 
 /**
  * @author Arthur Riechert
- * @version 1.1.1
+ * @version 2.0.1
  */
 export default function LandingHero() {
 
@@ -26,7 +26,7 @@ export default function LandingHero() {
                         </p>
                     </div>
                 </div>
-                <Image src='/head_shot.jpeg' width='300' height='300' alt='Picture of Arthur' className='ml-40 mr-12 w-96 h-96 bg-red-200 rounded-full'/>
+                <Image src='/head_shot.jpeg' width='300' height='300' alt='Picture of Arthur' className='ml-40 mr-12 w-96 h-96 bg-red-200 rounded-full shadow-2xl'/>
             </div>
             <Button
                 text='Learn More'
