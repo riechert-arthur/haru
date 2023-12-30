@@ -9,7 +9,7 @@ import { montserrat } from './Fonts'
  * - Add dark mode toggle button
  *
  * @author Arthur Riechert
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 interface SocialLink {
@@ -46,8 +46,8 @@ export default function Footer() {
             <div className='py-2 bg-sky-400'>
                 <div className='flex w-full justify-center'>
                     {
-                        socials.map(social => (
-                            <Link href={ social.url } target='_blank'>
+                        socials.map((social: SocialLink, index: number) => (
+                            <Link key={ index } href={ social.url } target='_blank'>
                                 <button>
                                     <Image className='ml-6' src={ social.icon } width='40' height='40' alt={`${social.name} logo`} />
                                 </button>
@@ -57,8 +57,8 @@ export default function Footer() {
                 </div>
                 <div className={`flex mt-3 justify-center text-2xl font-extralight ${montserrat.className}`}>
                     {
-                        internalLinks.map(link => (
-                            <Link className='ml-6' href={ link.route }>{ link.name }</Link>
+                        internalLinks.map((link: InternalLink, index: number) => (
+                            <Link key={ index } className='ml-6' href={ link.route }>{ link.name }</Link>
                         ))
                     }
                 </div>

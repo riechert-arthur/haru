@@ -15,8 +15,8 @@ export default function ProjectList() {
     return (
         <div className='mt-10 grid grid-cols-2 gap-7'>
             {
-                projectMetadata.map(data => (
-                    <div className={`${montserrat.className}`}>
+                projectMetadata.map((data: ProjectMetadata, index: number) => (
+                    <div key={ index } className={`${montserrat.className}`}>
 
                         <div className='w-full h-96 overflow-hidden rounded-2xl shadow-2xl'>
                             <img src={ data.thumbnail } alt={`${ data.title } thumbnail.`} className='' />

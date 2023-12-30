@@ -4,7 +4,7 @@ import { montserrat } from './Fonts'
  * Displays a list of previous jobs from an external text file.
  *
  * @author Arthur Riechert
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 /* Information used to display information about previous jobs. */
@@ -49,8 +49,8 @@ export default function WorkList() {
     return (
         <div className={`pl-8 pr-10 pt-1 mt-7 border-2 border-y-transparent border-r-transparent border-l-white font-light ${montserrat.className}`}>
             {
-                jobs.map(job => (
-                    <div className='mt-2 mb-7'>
+                jobs.map((job: Job, index: number) => (
+                    <div key={ index } className='mt-2 mb-7'>
                         <h3 className='mb-2 text-4xl'>{ job.Employer }</h3>
                         <div className='flex flex-col mb-7'>
                             <text className='text-2xl'><i>{ job.Role }</i></text>

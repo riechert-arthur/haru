@@ -2,72 +2,69 @@ import { montserrat } from './Fonts'
 import Image from 'next/image'
 import { useState } from 'react'
 /**
- * TODO:
- * - Update with real, not placeholder content.
- *
  * @author Arthur Riechert
- * @version 1.0.0
+ * @version 1.0.1
  */
 
+interface Details {
+    Software?: string[]
+    Libraries?: string[]
+    Frameworks?: string[]
+}
+
+interface SkillSelection {
+    Name: string
+    IconPath: string
+    Details: Details
+    Expanded: boolean
+}
+
+const skillDetails: SkillSelection[] = [
+    {
+        Name: 'Python',
+        IconPath: '/python.svg',
+        Details: {
+            Libraries: ['Numpy', 'Pandas', 'Beautiful Soup', 'Streamlit', 'Scrapy'],
+            Frameworks: ['Flask', 'Django', 'FastAPI']
+        },
+        Expanded: false
+    },
+    {
+        Name: 'Typescript/Javascript',
+        IconPath: '/typescript.svg',
+        Details: {
+            Frameworks: ['React', 'Next'],
+            Software: ['Node']
+        },
+        Expanded: false
+    },
+    {
+        Name: 'HTML/CSS',
+        IconPath: 'html-5.svg',
+        Details: {
+            Libraries: ['TailwindCSS']
+        },
+        Expanded: false
+    },
+    {
+        Name: 'Java',
+        IconPath: '/java.svg',
+        Details: {
+            Frameworks: ['Spring']
+        },
+        Expanded: false
+    },
+    {
+        Name: 'Developer Tools',
+        IconPath: '/merge.svg',
+        Details: {
+            Software: ['Git & Github']
+        },
+        Expanded: false
+    }
+]
+
 export default function SkillList() {
-
-    interface Details {
-        Software?: string[]
-        Libraries?: string[]
-        Frameworks?: string[]
-    }
-
-    interface SkillSelection {
-        Name: string
-        IconPath: string
-        Details: Details
-        Expanded: boolean
-    }
-
-    const skillDetails: SkillSelection[] = [
-        {
-            Name: 'Python',
-            IconPath: '/python.svg',
-            Details: {
-                Libraries: ['Numpy', 'Pandas', 'Beautiful Soup', 'Streamlit', 'Scrapy'],
-                Frameworks: ['Flask', 'Django', 'FastAPI']
-            },
-            Expanded: false
-        },
-        {
-            Name: 'Typescript/Javascript',
-            IconPath: '/typescript.svg',
-            Details: {
-                Frameworks: ['React', 'Next'],
-                Software: ['Node']
-            },
-            Expanded: false
-        },
-        {
-            Name: 'HTML/CSS',
-            IconPath: 'html-5.svg',
-            Details: {
-                Libraries: ['TailwindCSS']
-            },
-            Expanded: false
-        },
-        {
-            Name: 'Java',
-            IconPath: '/java.svg',
-            Details: {
-                Frameworks: ['Spring']
-            },
-            Expanded: false
-        },
-        {
-            Name: 'Developer Tools',
-            IconPath: '/merge.svg',
-            Details: {
-                Software: ['Git & Github']
-            },
-            Expanded: false
-        }
-    ]
 
     const [skills, setSkills] = useState(skillDetails)
 
@@ -77,7 +74,7 @@ export default function SkillList() {
             <div className='mt-7 grid grid-cols-2 gap-6 w-full max-h-fit'>
                 {
                     skills.map((skill: SkillSelection, index: number) => (
-                        <div>
+                        <div key={ index }>
                             <div 
                                 className={`relative p-11 max-h-min items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl hover:cursor-pointer hover:scale-105`}
                                 onClick={() => {

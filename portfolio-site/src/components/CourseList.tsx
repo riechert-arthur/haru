@@ -4,7 +4,7 @@ import { montserrat } from './Fonts'
  * Displays a list of courses from an external text file.
  *
  * @author Arthur Riechert
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 /* Information used to display information about classes taken in university. */
@@ -86,8 +86,8 @@ export default function CourseList() {
     return (
         <div className={`pl-8 pr-10 pt-1 mt-7 border-2 border-y-transparent border-r-transparent border-l-white font-light ${montserrat.className}`}>
             {
-                courses.map((course) => (
-                    <div className='mt-2 mb-7'>
+                courses.map((course: Course, index: number) => (
+                    <div key={ index } className='mt-2 mb-7'>
                         <h3 className='mb-2 text-4xl'>{ course.Name }</h3>
                         <div className='flex pl-2 mb-7'>
                             <text className='text-2xl'>{ course.CompletionDate }</text>
