@@ -13,7 +13,7 @@ export default async function Page( { params }: { params: { slug: string } }) {
     const data: ProjectData = await getProjectData(params.slug)
 
     return (
-        <main className={`flex flex-col pb-24 w-full ${montserrat.className}`}>
+        <main className={`flex flex-col px-48 pb-24 w-full ${montserrat.className}`}>
             <div className='py-48'>
                 <h2 className='text-6xl font-mono'>{ data.metadata.title }</h2>
                 <div className='pt-3'>

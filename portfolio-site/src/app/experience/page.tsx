@@ -8,7 +8,7 @@ import WorkList from "../../components/WorkList"
 
 export default function Experience() {
     return (
-        <main className='flex flex-strat pb-24 min-h-screen font-mono'>
+        <main className='flex flex-strat px-48 pb-24 min-h-screen font-mono'>
             <div className='py-48 w-full'>
                 <div className='flex items-end mb-6'>
                     <h1 className='text-6xl mr-7'>Work Experience</h1>

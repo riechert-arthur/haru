@@ -9,7 +9,7 @@ import Link from "next/link"
 export default function About() {
 
     return (
-        <main className='w-full flex flex-col pb-24'>
+        <main className='w-full flex flex-col px-48 pb-24'>
             <div className='py-48'>
                 <h1 className='text-6xl mr-7 font-mono'>Contact Me</h1>
                 <div className={`flex flex-col items-center w-full mt-16 text-4xl ${montserrat.className} font-light`}>

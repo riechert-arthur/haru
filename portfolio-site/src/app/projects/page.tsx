@@ -16,7 +16,7 @@ import { montserrat } from '../../components/Fonts'
 export default function Projects() {
 
     return (
-        <main className='min-h-screen pb-24'>
+        <main className='min-h-screen px-48 pb-24'>
             <div className='py-48'>
                 <h1 className='font-mono text-5xl'>Projects</h1>
                 <div className='flex pt-7'>

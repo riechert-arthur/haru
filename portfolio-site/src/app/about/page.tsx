@@ -17,7 +17,7 @@ export default function About() {
     const [displaySkills, setDisplay] = useState(false)
 
     return (
-        <main className='flex flex-strat min-h-screen font-mono pb-24'>
+        <main className='flex flex-strat px-48 min-h-screen font-mono pb-24'>
             <div className='py-48 w-full'>
                 <div className='flex items-end mb-7'>
                     <h1 className='text-6xl mr-7'>{displaySkills ? 'Skills' : 'Education'}</h1>
