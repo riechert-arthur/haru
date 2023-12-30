@@ -4,7 +4,7 @@ A portfolio website built in React and Next.js.
 
 ## Landing Page Design
 ### V2.0.0
-![Landing Design Screenshot](/readme-assets/landing_figma_design_200.png)
+![Landing Design Screenshot](/readme-assets/landing_figma_design_201.png)
 
 ## About Page Design
 ### Education V2.0.0
