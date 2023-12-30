@@ -101,8 +101,8 @@ export default function CourseList() {
                         </div>
                         <ul className='ml-6 text-xl list-disc tracking-wider'>
                             {
-                                course.Description.map((item) => (
-                                    <li className='mb-4'>{ item }</li>
+                                course.Description.map((item: string, i: number) => (
+                                    <li key={ i } className='mb-4'>{ item }</li>
                                 ))
                             }
                         </ul>
