@@ -90,20 +90,20 @@ export default function SkillList() {
                                 <div className={`mt-6 ${montserrat.className} ${skill.Expanded ? '' : 'hidden'}`}>
                                     <text className={`text-3xl ${skill.Details.Software ? '' : 'hidden'}`}>Software</text>
                                     <ul className='pl-2 ml-1 border-l'>
-                                        {skill.Details.Software?.map((software) => {
-                                            return <li className='text-2xl font-light'>{ software }</li>
+                                        {skill.Details.Software?.map((software: string, i: number) => {
+                                            return <li key={ i } className='text-2xl font-light'>{ software }</li>
                                         })}
                                     </ul>
                                     <text className={`text-3xl ${skill.Details.Libraries ? '' : 'hidden'}`}>Libraries</text>
                                     <ul className='pl-2 ml-1 border-l'>
-                                        {skill.Details.Libraries?.map((library) => {
-                                            return <li className='text-2xl font-light'>{ library }</li>
+                                        {skill.Details.Libraries?.map((library: string, i: number) => {
+                                            return <li key={ i } className='text-2xl font-light'>{ library }</li>
                                         })}
                                     </ul>
                                     <text className={`text-3xl ${skill.Details.Frameworks ? '' : 'hidden'}`}>Frameworks</text>
                                     <ul className='pl-2 ml-1 border-l'>
-                                        {skill.Details.Frameworks?.map((framework) => {
-                                            return <li className='text-2xl font-light'>{ framework }</li>
+                                        {skill.Details.Frameworks?.map((framework: string, i: number) => {
+                                            return <li key={ i } className='text-2xl font-light'>{ framework }</li>
                                         })}
                                     </ul>
                                 </div>

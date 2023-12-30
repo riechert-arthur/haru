@@ -58,8 +58,8 @@ export default function WorkList() {
                         </div>
                         <ul className='ml-6 text-xl list-disc tracking-wider'>
                             {
-                                job.Description.map(job => (
-                                    <li className='mb-4'>{ job }</li>
+                                job.Description.map((job: string, i: number) => (
+                                    <li key={ i } className='mb-4'>{ job }</li>
                                 ))
                             }
                         </ul>
