@@ -29,7 +29,7 @@ export default function SkillList() {
             Name: 'Python',
             IconPath: '/python.svg',
             Details: {
-                Libraries: ['Numpy', 'Pandas', 'Beautiful Soup', 'Streamlit'],
+                Libraries: ['Numpy', 'Pandas', 'Beautiful Soup', 'Streamlit', 'Scrapy'],
                 Frameworks: ['Flask', 'Django', 'FastAPI']
             },
             Expanded: false

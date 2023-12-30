@@ -33,7 +33,7 @@ const courses: Course[] = [
     {
         Name: 'Introduction to Object-Oriented Programming',
         CompletionDate: 'Fall 2023',
-        LetterGrade: 'A',
+        LetterGrade: ' ',
         Description: [
             `Developed proficiency in Java, mastering the following object-oriented principles:
             inheritance, polymorphism, abstract classes, interfaces, generics, and single responsibility principle.`,
@@ -45,7 +45,7 @@ const courses: Course[] = [
     },
     {
         Name: 'Data Structures and Algorithms for Applications',
-        CompletionDate: 'Spring 2024',
+        CompletionDate: 'In-Progress',
         LetterGrade: ' ',
         Description: [
             `Developed understanding of fundamental data structures and algorithms in computing such as
@@ -58,25 +58,26 @@ const courses: Course[] = [
     },
     {
         Name: 'Computer Organization',
-        CompletionDate: 'Spring 2024',
+        CompletionDate: 'In-Progress',
         LetterGrade: ' ',
         Description: [
-            `Developed proficiency in Java, mastering the following object-oriented principles:
-            inheritance, polymorphism, abstract classes, interfaces, generics, and single responsibility principle.`,
+            `Covered bits, integer representation, arithmetic, logic circuits, and the von Neumann model.`,
 
-            `Applied object-oriented principles to data structures and algorithms such as merge sort, linked lists, and trees.`,
+            `Focused on processor components, the LC-3 datapath, and assembly language basics.`,
 
-            `Used asymptotics to analyze code implementations.`,
+            `Practiced C programming, including pointers and memory, and introduced embedded systems.`,
         ],
     },
     {
         Name: 'Object-Oriented Design',
-        CompletionDate: 'Spring 2024',
+        CompletionDate: 'In-Progress',
         LetterGrade: ' ',
         Description: [
-            'Utilized Gang of Four principles in developing applications.',
+            'Covered the Unified Process, testing, and Test-Driven Development.',
             
-            'Built practical applications using Java.',
+            'Focused on UML, class diagramming, and design principles.',
+
+            'Utilized design patterns and code review techniques in projects',
         ]
     }
 ]

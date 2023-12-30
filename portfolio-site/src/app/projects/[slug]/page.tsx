@@ -16,7 +16,9 @@ export default async function Page( { params }: { params: { slug: string } }) {
         <main className={`flex flex-col pb-24 w-full ${montserrat.className}`}>
             <div className='py-48'>
                 <h2 className='text-6xl font-mono'>{ data.metadata.title }</h2>
-                <text className={`mt-2 text-3xl font-light `}><i>{ data.metadata.date }</i></text>
+                <div className='pt-3'>
+                    <text className={`text-3xl font-light `}><i>{ data.metadata.date }</i></text>
+                </div>
                 <div className='flex mt-1'>
                     <div className='flex'>
                         <Image src='/github.svg' alt='Github logo' width='25' height='25'></Image>
