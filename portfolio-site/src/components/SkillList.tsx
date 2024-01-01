@@ -71,12 +71,12 @@ export default function SkillList() {
     return (
         <div className='w-full'>
             <text className={`${montserrat.className} text-xl tracking-wider font-light`}><i>Click each skill for more detail.</i></text>
-            <div className='mt-7 grid grid-cols-2 gap-6 w-full max-h-fit'>
+            <div className='mt-7 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-h-fit'>
                 {
                     skills.map((skill: SkillSelection, index: number) => (
                         <div key={ index }>
                             <div 
-                                className={`relative p-11 max-h-min items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl hover:cursor-pointer hover:scale-105`}
+                                className={`relative p-5 md:p-11 max-h-min items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl hover:cursor-pointer hover:scale-105`}
                                 onClick={() => {
                                     skills[index].Expanded = !skills[index].Expanded
                                     setSkills([...skills])
@@ -84,7 +84,20 @@ export default function SkillList() {
                                 }}
                             >
                                 <div className='flex overflow-x-scroll'>
-                                    <Image width='75' height='75' alt={`${skill.Name} icon.`} src={skill.IconPath} />
+                                    <Image
+                                        className='hidden md:inline'
+                                        alt={`${skill.Name} icon.`}
+                                        src={skill.IconPath}
+                                        height='75'
+                                        width='75'
+                                    />
+                                    <Image
+                                        className='md:hidden'
+                                        alt={`${skill.Name} icon.`}
+                                        src={skill.IconPath}
+                                        height='50'
+                                        width='50'
+                                    />
                                     <h2 className='ml-6 leading-loose translate-y-1'>{ skill.Name }</h2>
                                 </div>
                                 <div className={`mt-6 ${montserrat.className} ${skill.Expanded ? '' : 'hidden'}`}>
