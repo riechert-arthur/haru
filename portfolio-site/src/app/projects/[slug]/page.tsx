@@ -13,8 +13,8 @@ export default async function Page( { params }: { params: { slug: string } }) {
     const data: ProjectData = await getProjectData(params.slug)
 
     return (
-        <main className={`flex flex-col px-48 pb-24 w-full ${montserrat.className}`}>
-            <div className='py-48'>
+        <main className={`flex flex-col px-8 md:px-48 md:pb-24 w-full ${montserrat.className}`}>
+            <div className='py-8 md:py-48'>
                 <h2 className='text-6xl font-mono'>{ data.metadata.title }</h2>
                 <div className='pt-3'>
                     <text className={`text-3xl font-light `}><i>{ data.metadata.date }</i></text>
@@ -31,7 +31,7 @@ export default async function Page( { params }: { params: { slug: string } }) {
                 </div>
                 <p className='mt-2 font-light text-2xl'>{ data.metadata.description }</p>
                 <div className='flex mt-8 w-full justify-center items-center'>
-                    <iframe className='shadow-2xl rounded-3xl' src={ data.metadata.live } width='1335' height='740'></iframe>
+                    <iframe className='shadow-2xl rounded-3xl w-full' src={ data.metadata.live } width='1335' height='740'></iframe>
                 </div>
                 <div className={`markdown mt-12 ${montserrat.className} font-light`} dangerouslySetInnerHTML={{ __html: data.html }}></div>
             </div>

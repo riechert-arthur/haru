@@ -16,8 +16,8 @@ import { montserrat } from '../../components/Fonts'
 export default function Projects() {
 
     return (
-        <main className='min-h-screen px-48 pb-24'>
-            <div className='py-48'>
+        <main className='min-h-screen px-8 md:px-48 pb-12 md:pb-24'>
+            <div className='py-8 md:py-48'>
                 <h1 className='font-mono text-5xl'>Projects</h1>
                 <div className='flex pt-7'>
                     <text className={`${ montserrat.className } font-light text-xl`}><i>Find more <Link href='https://github.com/riechert-arthur'><u>here</u></Link></i></text>

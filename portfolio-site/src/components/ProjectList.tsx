@@ -13,13 +13,13 @@ export default function ProjectList() {
     const projectMetadata: ProjectMetadata[] = getProjectMetadata()
 
     return (
-        <div className='mt-10 grid grid-cols-2 gap-7'>
+        <div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-7'>
             {
                 projectMetadata.map((data: ProjectMetadata, index: number) => (
                     <div key={ index } className={`${montserrat.className}`}>
 
-                        <div className='w-full h-96 overflow-hidden rounded-2xl shadow-2xl'>
-                            <img src={ data.thumbnail } alt={`${ data.title } thumbnail.`} className='' />
+                        <div className='overflow-hidden w-full h-48 md:h-96 overflow-hidden rounded-2xl shadow-2xl'>
+                            <img src={ data.thumbnail } alt={`${ data.title } thumbnail.`} className='w-full h-full object-cover' />
                         </div>
 
                         <h2 className={`mt-6 ${montserrat.className} text-4xl`}>{ data.title }</h2>
