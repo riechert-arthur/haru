@@ -64,7 +64,7 @@ export default function Footer() {
                         ))
                     }
                 </div>
-                <div className={`flex flex-wrap justify-center md:flex-row md:mt-3 md:justify-between
+                <div className={`flex flex-wrap justify-center md:flex-row mt-1 md:mt-3 md:justify-between
                     text-2xl font-extralight ${montserrat.className}`
                 }>
                     {
@@ -81,7 +81,7 @@ export default function Footer() {
                 </div>
                 <div className='flex w-full justify-center'>
                     <text
-                        className={`mt-20 text-lg font-light
+                        className={`mt-20 text-md font-light
                             ${montserrat.className}`
                     }>
                         ©2023 Arthur Riechert | All Rights Reserved
