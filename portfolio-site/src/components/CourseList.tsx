@@ -1,4 +1,6 @@
 import { montserrat } from './Fonts'
+import { useState } from 'react'
+import Image from 'next/image'
 
 /**
  * Displays a list of courses from an external text file.
@@ -83,13 +85,18 @@ const courses: Course[] = [
 ]
 
 export default function CourseList() {
+
+    const [displayDescription, setDisplayDescription] = useState(
+        new Array(courses.length).fill(false)
+    )
+
     return (
-        <div className={`pl-8 pr-10 pt-1 mt-7 border-2 border-y-transparent border-r-transparent border-l-white font-light ${montserrat.className}`}>
+        <div className={`md:pl-8 pr-10 pt-1 mt-7 border-2 border-y-transparent border-r-transparent border-l-transparent md:border-l-white font-light ${montserrat.className}`}>
             {
                 courses.map((course: Course, index: number) => (
                     <div key={ index } className='mt-2 mb-7'>
-                        <h3 className='mb-2 text-4xl'>{ course.Name }</h3>
-                        <div className='flex pl-2 mb-7'>
+                        <h3 className='mb-2 text-3xl md:text-4xl'>{ course.Name }</h3>
+                        <div className='flex md:pl-2'>
                             <text className='text-2xl'>{ course.CompletionDate }</text>
 
                             {/* Grades will be hidden if below a C; otherwise, they will display the color assigned to them.*/}
@@ -99,7 +106,30 @@ export default function CourseList() {
                             </text>
 
                         </div>
-                        <ul className='ml-6 text-xl list-disc tracking-wider'>
+                        <button
+                            onClick={() => setDisplayDescription(prevDisplayDescription => {
+                                const newDisplayDescription = [...prevDisplayDescription];
+                                newDisplayDescription[index] = !newDisplayDescription[index];
+                                return newDisplayDescription;
+                            })}
+                            className='md:hidden flex items-center'
+                        >
+                            <text className='text-xl'>{displayDescription[index] ? 'Collapse' : 'Expand'}</text>
+                            <Image
+                                src={ `${displayDescription[index] ? '/up-arrow.svg' : '/down-arrow.svg'}` }
+                                alt='Down arrow'
+                                height='20'
+                                width='20'
+                            />
+                        </button>
+                        <ul key={ course.Name } className={ `md:hidden ${displayDescription[index] ? '' : 'hidden'} ml-6 text-xl list-disc tracking-wider` }>
+                            {
+                                course.Description.map((item: string, i: number) => (
+                                    <li key={ i } className='mb-4'>{ item }</li>
+                                ))
+                            }
+                        </ul>
+                        <ul key={ course.Name } className={ `hidden md:inline ml-6 text-xl list-disc tracking-wider` }>
                             {
                                 course.Description.map((item: string, i: number) => (
                                     <li key={ i } className='mb-4'>{ item }</li>
