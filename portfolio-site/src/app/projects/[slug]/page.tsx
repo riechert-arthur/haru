@@ -8,7 +8,7 @@ import { montserrat } from "@/components/Fonts"
  * @version 1.0.0
  */
 
-export default async function Page( { params }: { params: { slug: string } }) {
+export default async function ProjectPage( { params }: { params: { slug: string } }) {
 
     const data: ProjectData = await getProjectData(params.slug)
 
