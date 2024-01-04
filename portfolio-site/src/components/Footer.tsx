@@ -44,7 +44,7 @@ export default function Footer() {
         <footer className="flex flex-col overflow-x-hidden md:-mt-60 w-full">
             <img className='w-full object-cover' src='/footer-waves.svg'></img>
             <div className='flex flex-col p-2 w-full items-center py-2 bg-sky-400'>
-                <div className='flex w-2/5 max-w-sm-footer-socials md:min-w-footer-socials md:max-w-footer-socials justify-between'>
+                <div className='flex w-2/5 md:min-w-footer-socials max-w-footer-socials justify-between'>
                     {
                         socials.map((social: SocialLink, index: number) => (
                             <Link

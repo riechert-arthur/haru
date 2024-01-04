@@ -20,7 +20,6 @@ const config: Config = {
       maxWidth: {
         'nav': '600px',
         'footer-socials': '190px',
-        'sm-footer-socials': '180px',
         'footer-internals': '650px',
       }
     },
