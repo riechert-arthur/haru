@@ -14,9 +14,13 @@ const config: Config = {
       },
       minWidth: {
         'nav': '520px',
+        'footer-socials': '160px',
+        'footer-internals': '630px',
       },
       maxWidth: {
         'nav': '600px',
+        'footer-socials': '190px',
+        'footer-internals': '650px',
       }
     },
   },
