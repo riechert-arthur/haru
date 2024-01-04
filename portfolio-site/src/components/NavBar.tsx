@@ -31,15 +31,15 @@ export default function NavBar() {
 
     return (
         <nav 
-            className={`overflow-hidden flex items-center md:justify-between
+            className={`overflow-hidden flex justify-between
                 w-full px-3 md:px-11 py-4 bg-slate-900/60`
             }>
             <Link
-                className={ `text-2xl tracking-wide
+                className={ `flex items-center justify-center text-2xl tracking-wide
                     ${montserrat.className} hover:text-gray-400 hover:scale-105`}
                 href='/'
             >
-                Arthur Riechert
+                <h1 className='text-center'>Arthur Riechert</h1>
             </Link>
             <div className='flex justify-end md:items-center md:justify-between w-1/2 md:w-2/5 md:min-w-nav md:max-w-nav'>
                 {
