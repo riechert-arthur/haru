@@ -14,7 +14,7 @@ export default function LandingHero() {
     const learnMorePath: string = '/about'
 
     return (
-        <div className='flex flex-col items-center w-full'>
+        <div className='lg:max-w-landing-hero flex flex-col items-center w-full'>
             <div className={`flex flex-col mb-8 md:flex-row w-full md:justify-between
                 items-center font-mono text-sm tracking-wider`
             }>
