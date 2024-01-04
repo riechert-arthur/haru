@@ -15,17 +15,17 @@ export default function LandingHero() {
 
     return (
         <div className='flex flex-col items-center w-full'>
-            <div className={`flex flex-col md:flex-row w-full md:justify-between
+            <div className={`flex flex-col mb-8 md:flex-row w-full md:justify-between
                 items-center font-mono text-sm tracking-wider`
             }>
                 <div className='flex flex-col w-full justify-center items-center'>
-                    <h1 className='w-full text-5xl md:text-5xl text-center'>Software Engineer</h1>
+                    <h1 className='w-full text-5xl md:text-5xl text-left'>Software Engineer</h1>
                     <Image
                         src='/head_shot.jpeg'
                         width='100'
                         height='100'
                         alt='Picture of Arthur'
-                        className='mt-8 md:hidden md:ml-40 md:mr-12 w-72 h-72 bg-red-200 rounded-full shadow-2xl'
+                        className='mt-8 md:hidden md:ml-40 md:mr-12 w-68 h-68 bg-red-200 rounded-full shadow-2xl'
                     />
                     <div className="flex max-w-4xl">
                         <p className='mt-14 text-2xl text-center md:text-left leading-8 tracking-widest leading-relaxed'>
@@ -40,12 +40,12 @@ export default function LandingHero() {
                     width='300'
                     height='300'
                     alt='Picture of Arthur'
-                    className='hidden md:inline ml-40 mr-12 w-96 h-96 bg-red-200 rounded-full shadow-2xl'
+                    className='hidden md:block md:max-lg:ml-8 md:ml-40 md:max-lg:mr-0 md:mr-12 md:max-lg:w-72 md:max-lg:h-72 md:w-96 md:h-96 bg-red-200 rounded-full shadow-2xl'
                 />
             </div>
             <Button
                 text='Learn More'
-                extraClassNames='mt-12 md:mt-0 p-6 w-2/3 text-3xl rounded-2xl'
+                extraClassNames='md:self-start md:mt-0 p-6 w-2/3 md:w-fit text-3xl rounded-2xl'
                 functionToCall={() => router.push(learnMorePath)}
             />
         </div>

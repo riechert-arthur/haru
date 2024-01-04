@@ -39,7 +39,7 @@ export default function NavBar() {
                     ${montserrat.className} hover:text-gray-400 hover:scale-105`}
                 href='/'
             >
-                <h1 className='text-center'>Arthur Riechert</h1>
+                <h1 className='text-left'>Arthur Riechert</h1>
             </Link>
             <div className='flex justify-end md:items-center md:justify-between w-1/2 md:w-2/5 md:min-w-nav md:max-w-nav'>
                 {
