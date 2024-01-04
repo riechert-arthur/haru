@@ -12,6 +12,12 @@ const config: Config = {
         'polygon-scatter': "url('/polygon-scatter.svg')",
         'menu-icon': "url('/menu.svg')",
       },
+      minWidth: {
+        'nav': '520px',
+      },
+      maxWidth: {
+        'nav': '600px',
+      }
     },
   },
   plugins: [],
