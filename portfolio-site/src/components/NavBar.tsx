@@ -41,7 +41,7 @@ export default function NavBar() {
             >
                 Arthur Riechert
             </Link>
-            <div className='flex justify-end md:items-center md:justify-between w-1/2 md:w-2/5'>
+            <div className='flex justify-end md:items-center md:justify-between w-1/2 md:w-2/5 md:min-w-nav md:max-w-nav'>
                 {
                     Object.keys(navigationLinks).map((key: string, index: number) => (
                         <Link
