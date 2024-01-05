@@ -21,7 +21,7 @@ const config: Config = {
         'nav': '600px',
         'footer-socials': '190px',
         'footer-internals': '650px',
-        'landing-hero': '1500px',
+        'large-screens': '1500px',
       }
     },
   },
