@@ -18,7 +18,7 @@ export default function About() {
 
     return (
         <main className='flex flex-strat justify-center md:max-lg:px-16 md:justify-left px-8 md:px-48 min-h-screen font-mono pb-0 md:pb-24'>
-            <div className='py-12 md:py-48 w-full'>
+            <div className='lg:max-w-large-screens py-12 md:py-48 w-full'>
                 <div className='flex flex-wrap md:flex-row items-end mb-7'>
                     <h1 className='text-5xl md:text-6xl mr-7'>{displaySkills ? 'Skills' : 'Education'}</h1>
                     <button className='mb-1 text-3xl text-gray-400' onClick={() => setDisplay(!displaySkills)}><u>{displaySkills ? 'Education' : 'Skills'}</u>&gt;</button>

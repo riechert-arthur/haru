@@ -12,9 +12,8 @@ export default function Resume() {
                 <h2 className='text-6xl font-mono'>Resumè</h2>
                 <div className='flex justify-center'>
                     <iframe
-                        className='mt-16 shadow-md aspect-[8.5/11]'
+                        className='mt-16 md:w-full lg:w-3/5 h-fit shadow-md aspect-[8.5/11]'
                         src='/resume.pdf#zoom=135'
-                        width='100%'
                     >
                     </iframe>
                 </div>
