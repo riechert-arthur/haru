@@ -8,7 +8,7 @@ import { montserrat } from "@/components/Fonts"
 export default function Resume() {
     return (
         <>
-            <main className='hidden lg:max-w-landing-hero md:block lg:flex lg:flex-col lg:justify-center md:max-lg:px-16 px-48 py-48 mb-8'>
+            <main className='hidden w-full lg:max-w-landing-hero md:flex lg:flex lg:flex-col md:justify-center lg:justify-center md:max-lg:px-16 px-48 py-48 mb-8'>
                 <h2 className='text-6xl font-mono'>Resumè</h2>
                 <div className='flex justify-center'>
                     <iframe

@@ -14,7 +14,7 @@ const config: Config = {
       },
       minWidth: {
         'nav': '520px',
-        'footer-socials': '160px',
+        'footer-socials': '150px',
         'footer-internals': '630px',
       },
       maxWidth: {

@@ -19,13 +19,13 @@ export default function LandingHero() {
                 items-center font-mono text-sm tracking-wider`
             }>
                 <div className='flex flex-col w-full justify-center items-center'>
-                    <h1 className='w-full text-5xl md:text-5xl text-left'>Software Engineer</h1>
+                    <h1 className='w-full text-5xl md:text-5xl text-center md:text-left'>Software Engineer</h1>
                     <Image
                         src='/head_shot.jpeg'
                         width='100'
                         height='100'
                         alt='Picture of Arthur'
-                        className='mt-8 md:hidden md:ml-40 md:mr-12 w-68 h-68 bg-red-200 rounded-full shadow-2xl'
+                        className='mt-8 md:hidden md:ml-40 md:mr-12 w-64 h-64 bg-red-200 rounded-full shadow-2xl'
                     />
                     <div className="flex max-w-4xl">
                         <p className='mt-14 text-2xl text-center md:text-left leading-8 tracking-widest leading-relaxed'>
