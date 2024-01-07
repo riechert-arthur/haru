@@ -22,8 +22,8 @@ export default function LandingHero() {
                     <h1 className='w-full text-5xl md:text-5xl text-center md:text-left'>Software Engineer</h1>
                     <Image
                         src='/head_shot.jpeg'
-                        width='100'
-                        height='100'
+                        width='200'
+                        height='200'
                         alt='Picture of Arthur'
                         className='mt-8 md:hidden md:ml-40 md:mr-12 w-64 h-64 bg-red-200 rounded-full shadow-2xl'
                     />
