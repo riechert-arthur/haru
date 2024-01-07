@@ -9,7 +9,7 @@ import { createContext, useState } from "react"
  * @version 1.0.0
  */
 
-const ThemeContext = createContext({
+export const ThemeContext = createContext({
     darkMode: false,
     toggleDarkMode: () => {},
 })
