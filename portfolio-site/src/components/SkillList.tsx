@@ -83,7 +83,7 @@ export default function SkillList() {
                                     console.log(skill.Expanded)
                                 }}
                             >
-                                <div className='flex overflow-x-scroll'>
+                                <div className='flex overflow-x-scroll overflow-y-hidden'>
                                     <Image
                                         className='hidden md:inline'
                                         alt={`${skill.Name} icon.`}

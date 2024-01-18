@@ -1,8 +1,10 @@
 'use client'
 
+import { Dispatch, SetStateAction } from 'react'
+import DarkButton from './DarkButton'
+import { montserrat } from './Fonts'
 import Image from 'next/image'
 import Link from 'next/link'
-import { montserrat } from './Fonts'
 
 /**
  * TODO:
@@ -79,15 +81,16 @@ export default function Footer() {
                         ))
                     }
                 </div>
+                <DarkButton /> 
                 <div className='flex w-full justify-center'>
                     <text
                         className={`mt-20 text-md font-light
-                            ${montserrat.className}`
+                            ${ montserrat.className }`
                     }>
                         ©2023 Arthur Riechert | All Rights Reserved
                     </text>
                 </div>
-            </div>          
+            </div>         
         </footer>
     )
 }

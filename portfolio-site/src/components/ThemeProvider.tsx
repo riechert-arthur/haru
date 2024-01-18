@@ -1,6 +1,7 @@
 'use client'
 
-import { createContext, useState } from "react"
+import { createContext, useContext, useState, useEffect } from "react"
+import { Inter } from "next/font/google"
 
 /**
  * Uses context to control dark & light mode. 
@@ -9,27 +10,35 @@ import { createContext, useState } from "react"
  * @version 1.0.0
  */
 
-export const ThemeContext = createContext({
-    darkMode: false,
-    toggleDarkMode: () => {},
-})
+const inter = Inter({ subsets: ["latin"] })
+
+const ThemeContext = createContext()
+
+export const useTheme = () => useContext(ThemeContext)
 
 export default function ThemeProvider({ children}: { children: any }) {
 
     const [darkMode, setDarkMode] = useState(false)
 
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode)
-    }
+    useEffect(() => {
+      const isDarkMode = localStorage.getItem("darkMode") === "true";
+      setDarkMode(isDarkMode)
+    }, [])
 
-    const contextValue = {
-        darkMode,
-        toggleDarkMode
-    }
+    useEffect(() => {
+      localStorage.setItem("darkMode", darkMode)
+      if(darkMode) {
+        document.documentElement.classList.add("dark")
+      } else {
+        document.documentElement.classList.remove("dark")
+      } 
+    }, [darkMode])
 
     return (
-        <ThemeContext.Provider value={ contextValue }>
+        <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
+          <div className={ `${ darkMode ? "bg-slate-800" : "bg-white" } ${inter.className}` }>
             { children }
+          </div>
         </ThemeContext.Provider>
     )
 }

@@ -1,15 +1,13 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import ThemeProvider from '@/components/ThemeProvider'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
+import type { Metadata } from 'next'
 import './globals.css'
 
 /**
  * @author Arthur Riechert
  * @version 1.0.0
  */
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Arthur Riechert',
@@ -27,10 +25,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-slate-800 ${inter.className}`}>
-        <NavBar />
-        {children}
-        <Footer />
+      <body>
+        <ThemeProvider>
+          <NavBar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
