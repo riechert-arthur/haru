@@ -18,7 +18,7 @@ export default function DarkButton() {
           onClick={
             () => setDarkMode(!darkMode)
           }
-          className={ `${ darkMode ? "bg-sun-icon" : "bg-night-icon" } bg-cover mt-6 w-50 h-50 hover:pointer`}
+          className={ `${ darkMode ? "bg-sun-icon" : "bg-night-icon" } bg-cover mt-6 w-50 h-50 hover:pointer shadow-2xl`}
         >
           <div className="w-10 h-10"></div>
         </button>

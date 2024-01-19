@@ -71,12 +71,12 @@ export default function SkillList() {
     return (
         <div className='w-full'>
             <text className={`${montserrat.className} text-xl tracking-wider font-light`}><i>Click each skill for more detail.</i></text>
-            <div className='mt-7 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-h-fit'>
+            <div className='mt-7 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-h-fit text-white'>
                 {
                     skills.map((skill: SkillSelection, index: number) => (
                         <div key={ index }>
                             <div 
-                                className={`relative p-5 md:p-11 max-h-min items-center justify-between bg-slate-700 text-4xl font-mono rounded-xl hover:cursor-pointer hover:scale-105`}
+                                className={`relative p-5 md:p-11 max-h-min items-center justify-between dark:bg-slate-700 bg-transparent border-sky-500 border-2 dark:border-0 text-black dark:text-white text-4xl font-mono rounded-xl hover:cursor-pointer hover:scale-105 dark:shadow-xl`}
                                 onClick={() => {
                                     skills[index].Expanded = !skills[index].Expanded
                                     setSkills([...skills])

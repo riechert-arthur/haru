@@ -28,7 +28,7 @@ export default function ProjectList() {
                             <div 
                                 className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold
                                     tracking-wide transition-opacity rounded-lg text-xl
-                                    ${montserrat.className}`}
+                                    ${montserrat.className} shadow-md`}
                             >
                                 <div className='flex'>
                                     <Link className='px-4 py-2' href={`/projects/${ data.slug }`} >Read More</Link>
@@ -37,7 +37,7 @@ export default function ProjectList() {
                             <div 
                                 className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold
                                     tracking-wide transition-opacity ml-5 px-4 rounded-lg text-xl
-                                    ${montserrat.className}`}
+                                    ${montserrat.className} shadow-md`}
                             >
                                 <div className='flex'>
                                     <Link className='py-2' href={ data.live }>View</Link>
