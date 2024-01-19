@@ -32,7 +32,8 @@ export default function NavBar() {
     return (
         <nav 
             className={`overflow-hidden flex justify-between
-                w-full px-3 md:px-11 py-4 bg-slate-900/60`
+                w-full px-3 md:px-11 py-4 dark:bg-slate-900/60
+                bg-transparent text-black dark:text-white`
             }>
             <Link
                 className={ `flex items-center justify-center text-2xl tracking-wide

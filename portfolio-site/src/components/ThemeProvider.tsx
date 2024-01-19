@@ -36,7 +36,7 @@ export default function ThemeProvider({ children}: { children: any }) {
 
     return (
         <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
-          <div className={ `${ darkMode ? "bg-slate-800" : "bg-white" } ${inter.className}` }>
+          <div className={ `${ darkMode ? "bg-slate-800" : "bg-white text-black" } ${inter.className}` }>
             { children }
           </div>
         </ThemeContext.Provider>

@@ -43,7 +43,7 @@ const internalLinks: InternalLink[] = [
 export default function Footer() {
 
     return (
-        <footer className="flex flex-col overflow-x-hidden md:-mt-60 w-full">
+        <footer className="flex flex-col overflow-x-hidden md:-mt-60 w-full text-white">
             <img className='w-full object-cover' src='/footer-waves.svg'></img>
             <div className='flex flex-col p-2 w-full items-center py-2 bg-sky-400'>
                 <div className='flex w-2/5 min-w-footer-socials max-w-footer-socials justify-between'>

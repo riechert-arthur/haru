@@ -24,7 +24,7 @@ export default function ProjectList() {
 
                         <h2 className={`mt-6 ${montserrat.className} text-4xl`}>{ data.title }</h2>
                         <p className='mt-2 font-light text-xl'>{ data.description }</p>
-                        <div className='flex mt-6 mb-2'>
+                        <div className='flex mt-6 mb-2 text-white'>
                             <div 
                                 className={`bg-sky-500/80 hover:bg-sky-600/80 font-semibold
                                     tracking-wide transition-opacity rounded-lg text-xl
