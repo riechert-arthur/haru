@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from "@/components/ThemeProvider.tsx"
+import { useTheme } from "./ThemeProvider"
 
 /**
  * A basic button that alters the shared dark mode state in layout. 
