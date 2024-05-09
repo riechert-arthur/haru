@@ -47,11 +47,11 @@ const courses: Course[] = [
     },
     {
         Name: 'Data Structures and Algorithms for Applications',
-        CompletionDate: 'In-Progress',
+        CompletionDate: 'Spring 2024',
         LetterGrade: ' ',
         Description: [
             `Developed understanding of fundamental data structures and algorithms in computing such as
-            Binary Search, Trees, Heap, and more.`,
+            BSTs, Heap, Graph Algorithms, Pattern Matching, AVLs, Hashmaps, and more.`,
 
             `Analyzed space and time complexity of algorithms using asymptotics.`,
 
@@ -60,10 +60,10 @@ const courses: Course[] = [
     },
     {
         Name: 'Computer Organization',
-        CompletionDate: 'In-Progress',
+        CompletionDate: 'Spring 2024',
         LetterGrade: ' ',
         Description: [
-            `Covered bits, integer representation, arithmetic, logic circuits, and the von Neumann model.`,
+            `Covered bits, data representations, logic circuits, and the von Neumann model.`,
 
             `Focused on processor components, the LC-3 datapath, and assembly language basics.`,
 
@@ -72,10 +72,10 @@ const courses: Course[] = [
     },
     {
         Name: 'Object-Oriented Design',
-        CompletionDate: 'In-Progress',
+        CompletionDate: 'Spring 2024',
         LetterGrade: ' ',
         Description: [
-            'Covered the Unified Process, testing, and Test-Driven Development.',
+            'Developed semester-long projects focusing on collaborating with a large team to implement agile and scrum methodologies and Git version control',
             
             'Focused on UML, class diagramming, and design principles.',
 

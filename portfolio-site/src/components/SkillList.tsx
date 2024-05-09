@@ -50,7 +50,8 @@ const skillDetails: SkillSelection[] = [
         Name: 'Java',
         IconPath: '/java.svg',
         Details: {
-            Frameworks: ['Spring']
+            Frameworks: ['Android Studio'],
+            Software: ['Maven', 'Gradle']
         },
         Expanded: false
     },
@@ -59,6 +60,26 @@ const skillDetails: SkillSelection[] = [
         IconPath: '/merge.svg',
         Details: {
             Software: ['Git & Github']
+        },
+        Expanded: false
+    },
+    {
+        Name: 'C',
+        IconPath: 'letter-c.svg',
+        Details: {},
+        Expanded: false
+    },
+    {
+        Name: 'Assembly',
+        IconPath: 'asm.svg',
+        Details: {},
+        Expanded: false
+    },
+    {
+        Name: 'Methodologies',
+        IconPath: 'agile.svg',
+        Details: {
+            Frameworks: ['Agile', 'SCRUM', 'Design Patterns', 'Requirements Engineering']
         },
         Expanded: false
     }
