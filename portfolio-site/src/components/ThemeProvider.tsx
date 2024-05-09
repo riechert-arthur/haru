@@ -24,7 +24,7 @@ export const useTheme = () => useContext(ThemeContext)
 
 export default function ThemeProvider({ children}: { children: any }) {
 
-    const [darkMode, setDarkMode] = useState(false)
+    const [darkMode, setDarkMode] = useState(true)
 
     useEffect(() => {
       const isDarkMode = localStorage.getItem("darkMode") === "true";
