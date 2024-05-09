@@ -11,14 +11,14 @@ import { useTheme } from "./ThemeProvider"
 
 export default function DarkButton() {
 
-    const { darkMode, setDarkMode } = useTheme() 
+    const contextValue = useTheme()
 
     return (
         <button 
           onClick={
-            () => setDarkMode(!darkMode)
+            () => contextValue?.setDarkMode(!contextValue?.darkMode)
           }
-          className={ `${ darkMode ? "bg-sun-icon" : "bg-night-icon" } bg-cover mt-6 w-50 h-50 hover:pointer shadow-2xl`}
+          className={ `${ contextValue?.darkMode ? "bg-sun-icon" : "bg-night-icon" } bg-cover mt-6 w-50 h-50 hover:pointer shadow-2xl`}
         >
           <div className="w-10 h-10"></div>
         </button>

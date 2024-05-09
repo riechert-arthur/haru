@@ -10,9 +10,15 @@ import { Inter } from "next/font/google"
  * @version 1.0.0
  */
 
+type ThemeContextValue = {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+
 const inter = Inter({ subsets: ["latin"] })
 
-const ThemeContext = createContext()
+const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export const useTheme = () => useContext(ThemeContext)
 
@@ -26,7 +32,7 @@ export default function ThemeProvider({ children}: { children: any }) {
     }, [])
 
     useEffect(() => {
-      localStorage.setItem("darkMode", darkMode)
+      localStorage.setItem("darkMode", darkMode.toString())
       if(darkMode) {
         document.documentElement.classList.add("dark")
       } else {
@@ -34,8 +40,13 @@ export default function ThemeProvider({ children}: { children: any }) {
       } 
     }, [darkMode])
 
+    const contextValue: ThemeContextValue = {
+      darkMode,
+      setDarkMode,
+    };
+
     return (
-        <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
+        <ThemeContext.Provider value={contextValue}>
           <div className={ `${ darkMode ? "bg-slate-800" : "bg-white text-black" } ${inter.className}` }>
             { children }
           </div>
