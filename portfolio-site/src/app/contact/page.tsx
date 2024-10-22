@@ -1,11 +1,6 @@
 import { montserrat } from "@/components/Fonts"
 import Link from "next/link"
 
-/**
- * @author Arthur Riechert
- * @version 1.0.0
- */
-
 export default function Contact() {
 
     return (

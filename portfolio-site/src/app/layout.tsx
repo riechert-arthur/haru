@@ -4,11 +4,6 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 import './globals.css'
 
-/**
- * @author Arthur Riechert
- * @version 1.0.0
- */
-
 export const metadata: Metadata = {
   title: 'Arthur Riechert',
   description: `Computer science student and aspiring software

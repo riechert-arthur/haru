@@ -2,14 +2,6 @@ import { montserrat } from './Fonts'
 import { useState } from 'react'
 import Image from 'next/image'
 
-/**
- * Displays a list of courses from an external text file.
- *
- * @author Arthur Riechert
- * @version 1.0.1
- */
-
-/* Information used to display information about classes taken in university. */
 interface Grade {
     [key: string]: string
 }
@@ -98,13 +90,10 @@ export default function CourseList() {
                         <h3 className='mb-2 text-3xl md:text-4xl'>{ course.Name }</h3>
                         <div className='flex md:pl-2'>
                             <text className='text-2xl'>{ course.CompletionDate }</text>
-
-                            {/* Grades will be hidden if below a C; otherwise, they will display the color assigned to them.*/}
                             <text 
                                 className={`ml-4 text-2xl ${grade[course.LetterGrade] === 'hidden' ? 'hidden' : ''}`}>
                                 Grade: <span className={ grade[course.LetterGrade] }>{ course.LetterGrade }</span>
                             </text>
-
                         </div>
                         <button
                             onClick={() => setDisplayDescription(prevDisplayDescription => {

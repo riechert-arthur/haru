@@ -3,13 +3,6 @@ import Image from 'next/image'
 import ProjectList from '../../components/ProjectList'
 import { montserrat } from '../../components/Fonts'
 
-/**
- * A page to store projects, so visitors can interact with them.
- *
- * @author Arthur Riechert
- * @version 1.0.1
- */
-
 export default function Projects() {
 
     return (

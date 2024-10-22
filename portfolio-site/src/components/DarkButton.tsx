@@ -2,13 +2,6 @@
 
 import { useTheme } from "./ThemeProvider"
 
-/**
- * A basic button that alters the shared dark mode state in layout. 
- *
- * @author Arthur Riechert
- * @version 2.0.0
- */
-
 export default function DarkButton() {
 
     const contextValue = useTheme()

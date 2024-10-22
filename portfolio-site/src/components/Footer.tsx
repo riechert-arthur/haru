@@ -6,14 +6,6 @@ import { montserrat } from './Fonts'
 import Image from 'next/image'
 import Link from 'next/link'
 
-/**
- * TODO:
- * - Add dark mode toggle button
- *
- * @author Arthur Riechert
- * @version 1.0.1
- */
-
 interface SocialLink {
     name: string
     icon: string

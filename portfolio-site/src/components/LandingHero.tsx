@@ -4,10 +4,6 @@ import Image from 'next/image'
 import Button from '../components/Button'
 import { useRouter } from 'next/navigation'
 
-/**
- * @author Arthur Riechert
- * @version 2.0.1
- */
 export default function LandingHero() {
 
     const router = useRouter()

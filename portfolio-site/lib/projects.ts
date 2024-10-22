@@ -4,13 +4,6 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
-/**
- * Utility functions for rendering data for projects.
- *
- * @author Arthur Riechert
- * @version 1.0.0
- */
-
 export interface ProjectMetadata {
     slug: string
     title: string

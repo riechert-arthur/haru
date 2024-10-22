@@ -1,10 +1,6 @@
 import { montserrat } from './Fonts'
 import Image from 'next/image'
 import { useState } from 'react'
-/**
- * @author Arthur Riechert
- * @version 1.0.1
- */
 
 interface Details {
     Software?: string[]

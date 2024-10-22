@@ -3,11 +3,6 @@ import Image from 'next/image'
 import { ProjectMetadata, getProjectMetadata } from '../../lib/projects'
 import Link from 'next/link'
 
-/**
- * @author Arthur Riechert
- * @version 1.1.0
- */
-
 export default function ProjectList() {
     
     const projectMetadata: ProjectMetadata[] = getProjectMetadata()

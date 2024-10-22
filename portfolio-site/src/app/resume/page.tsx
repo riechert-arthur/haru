@@ -1,10 +1,5 @@
 import { montserrat } from "@/components/Fonts"
 
-/**
- * @author Arthur Riechert
- * @version 1.0.0
- */
-
 export default function Resume() {
     return (
         <>
@@ -20,7 +15,6 @@ export default function Resume() {
             </main>
             <div className='flex flex-col py-8 items-center md:hidden'>
                 <h2 className='text-6xl font-mono'>Resumè</h2>
-                {/* Render a link to download the PDF on smaller screens */}
                 <a
                     className={`flex items-center justify-center 
                         w-3/5 p-8 mt-12 text-3xl bg-sky-500/80 hover:bg-sky-600/80

@@ -1,10 +1,4 @@
 import WorkList from "../../components/WorkList"
-/**
- * A page to display previous work experience. 
- *
- * @author Arthur Riechert
- * @version 1.0.0
- */
 
 export default function Experience() {
     return (

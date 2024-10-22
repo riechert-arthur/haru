@@ -4,14 +4,6 @@ import CourseList from '../../components/CourseList'
 import SkillList from '../../components/SkillList'
 import { useState } from 'react'
 
-/**
- * TODO:
- * - Create external text file for storing course information.
- *
- * @author Arthur Riechert
- * @version 2.0.0
- */
-
 export default function About() {
 
     const [displaySkills, setDisplay] = useState(false)

@@ -6,11 +6,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Button from '../components/Button'
 
-/**
- * @author Arthur Riechert
- * @version 1.0.1
- */
-
 const resumePath: string = '/resume'
 
     interface NavigationLinks {

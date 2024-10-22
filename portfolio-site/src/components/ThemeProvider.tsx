@@ -3,13 +3,6 @@
 import { createContext, useContext, useState, useEffect } from "react"
 import { Inter } from "next/font/google"
 
-/**
- * Uses context to control dark & light mode. 
- *
- * @author Arthur Riechert
- * @version 1.0.0
- */
-
 type ThemeContextValue = {
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;

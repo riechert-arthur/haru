@@ -1,14 +1,5 @@
 import { montserrat } from './Fonts'
 
-/**
- * Displays a list of previous jobs from an external text file.
- *
- * @author Arthur Riechert
- * @version 1.0.1
- */
-
-/* Information used to display information about previous jobs. */
-
 interface Job {
     Employer: string,
     Date: string,
