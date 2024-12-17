@@ -12,7 +12,7 @@ export default async function ProjectPage({
 
   return (
     <main
-      className={`flex flex-col px-8 md:max-lg:px-16 md:px-48 md:pb-24 w-full ${montserrat.className}`}
+      className={`dark:text-white flex flex-col px-8 md:max-lg:px-16 md:px-48 md:pb-24 w-full ${montserrat.className}`}
     >
       <div className="py-8 md:py-48">
         <h2 className="text-6xl font-mono">{data.metadata.title}</h2>
