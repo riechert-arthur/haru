@@ -1,15 +1,15 @@
-import ThemeProvider from '@/components/ThemeProvider'
-import NavBar from '@/components/NavBar'
-import Footer from '@/components/Footer'
-import type { Metadata } from 'next'
-import './globals.css'
+import ThemeProvider from "@/components/ThemeProvider"
+import NavBar from "@/components/NavBar"
+import Footer from "@/components/Footer"
+import type { Metadata } from "next"
+import "./globals.css"
 
 export const metadata: Metadata = {
-  title: 'Arthur Riechert',
+  title: "Arthur Riechert",
   description: `Computer science student and aspiring software
                 engineer at Georgia Institute of Technology.`,
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
 }
 
