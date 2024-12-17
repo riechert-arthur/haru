@@ -1,3 +1,123 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* General container styling */
+.markdown-content {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #000; /* Default text color for light mode */
+}
+
+.dark .markdown-content {
+  color: #fff; /* Text color for dark mode */
+}
+
+/* Headings */
+.markdown-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222; /* Default */
+}
+
+.dark .markdown-content h1 {
+  color: #ddd; /* Lighter text for dark mode */
+}
+
+.markdown-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+}
+
+.dark .markdown-content h2 {
+  color: #ccc;
+}
+
+.markdown-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.dark .markdown-content h3 {
+  color: #bbb;
+}
+
+/* Paragraphs */
+.markdown-content p {
+  margin-bottom: 1rem;
+}
+
+.dark .markdown-content p {
+  color: #e0e0e0; /* Dark mode paragraph text */
+}
+
+/* Links */
+.markdown-content a {
+  color: #0070f3;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.dark .markdown-content a {
+  color: #3ea8ff; /* Adjusted color for dark mode links */
+}
+
+.markdown-content a:hover {
+  color: #005bb5;
+}
+
+.dark .markdown-content a:hover {
+  color: #66c2ff;
+}
+
+/* Lists */
+.markdown-content ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+.markdown-content ol {
+  list-style: decimal;
+  margin-left: 1.5rem;
+}
+
+.dark .markdown-content ul,
+.dark .markdown-content ol {
+  color: #e0e0e0;
+}
+
+/* Images */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+/* Code Blocks */
+.markdown-content pre {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+
+.dark .markdown-content pre {
+  background-color: #2d2d2d; /* Dark mode code block background */
+}
+
+.markdown-content code {
+  font-family: 'Courier New', monospace;
+  background-color: #f9f9f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: #d63384;
+}
+
+.dark .markdown-content code {
+  background-color: #444;
+  color: #ff79c6;
+}

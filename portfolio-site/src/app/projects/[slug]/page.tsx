@@ -66,7 +66,7 @@ export default async function ProjectPage({
           ></iframe>
         </div>
         <div
-          className={`markdown mt-12 ${montserrat.className} font-light`}
+          className={`markdown-content mt-12 ${montserrat.className} font-light`}
           dangerouslySetInnerHTML={{ __html: data.html }}
         ></div>
       </div>
