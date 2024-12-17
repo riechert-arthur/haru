@@ -1,4 +1,4 @@
-import { ProjectData, getProjectData } from "../../../../lib/projects"
+import { ProjectData, getProjectData } from "../../../lib/projects"
 import Link from "next/link"
 import Image from "next/image"
 import { montserrat } from "@/components/Fonts"

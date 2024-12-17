@@ -1,6 +1,6 @@
 import { montserrat } from "./Fonts"
 import Image from "next/image"
-import { ProjectMetadata, getProjectMetadata } from "../../lib/projects"
+import { ProjectMetadata, getProjectMetadata } from "../lib/projects"
 import Link from "next/link"
 
 export default function ProjectList() {
