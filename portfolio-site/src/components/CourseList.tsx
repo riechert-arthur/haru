@@ -76,6 +76,70 @@ const courses: Course[] = [
     }
 ]
 
+function CourseItemHeader({ course }: { course: Course }) {
+    return (
+        <>
+            <h3 className='mb-2 text-3xl md:text-4xl'>{ course.Name }</h3>
+            <div className='flex md:pl-2'>
+                <text className='text-2xl'>{ course.CompletionDate }</text>
+                <text 
+                    className={`ml-4 text-2xl ${ grade[course.LetterGrade] === 'hidden' ? 'hidden' : '' }` }>
+                    Grade: <span className={ grade[course.LetterGrade] }>{ course.LetterGrade }</span>
+                </text>
+            </div>
+        </>
+    )
+}
+
+function CollapseButton({ i, displayDescription, setDisplayDescription }) {
+    return (
+        <button
+            onClick={() => setDisplayDescription(prevDisplayDescription => {
+                const newDisplayDescription = [...prevDisplayDescription];
+                newDisplayDescription[i] = !newDisplayDescription[i];
+                return newDisplayDescription;
+            })}
+            className='md:hidden flex items-center'
+        >
+            <text className='text-xl'>{ displayDescription[i] ? 'Collapse' : 'Expand' }</text>
+            <Image
+                src={ `${ displayDescription[i] ? '/up-arrow.svg' : '/down-arrow.svg' }` }
+                alt='Down arrow'
+                height='20'
+                width='20'
+            />
+        </button>
+    )
+}
+
+function CollapsibleList({ course }: { course: Course }) {
+    return (
+        <ul key={ course.Name }
+            className={ `hidden md:inline ml-6 text-xl list-disc tracking-wider` }
+        >
+            {
+                course.Description.map((item: string, i: number) => (
+                    <li key={ i } className='ml-8 mb-4'>{ item }</li>
+                ))
+            }
+        </ul>
+    )
+}
+
+function DefaultExpandedList({idx, course, displayDescription }) {
+    return (
+        <ul key={ course.Name }
+            className={ `md:hidden ${ displayDescription[idx] ? '' : 'hidden' } ml-6 text-xl list-disc tracking-wider` }
+        >
+            {
+                course.Description.map((item: string, i: number) => (
+                    <li key={ i } className='mb-4'>{ item }</li>
+                ))
+            }
+        </ul>
+    )
+}
+
 export default function CourseList() {
 
     const [displayDescription, setDisplayDescription] = useState(
@@ -83,48 +147,26 @@ export default function CourseList() {
     )
 
     return (
-        <div className={`md:pl-8 pr-10 pt-1 mt-7 border-2 border-y-transparent border-r-transparent border-l-transparent md:border-l-white font-light ${montserrat.className}`}>
+        <div className={`md:pl-8 pr-10 pt-1 mt-7 border-2 border-y-transparent border-r-transparent border-l-transparent md:border-l-white font-light ${ montserrat.className }`}>
             {
-                courses.map((course: Course, index: number) => (
-                    <div key={ index } className='mt-2 mb-7'>
-                        <h3 className='mb-2 text-3xl md:text-4xl'>{ course.Name }</h3>
-                        <div className='flex md:pl-2'>
-                            <text className='text-2xl'>{ course.CompletionDate }</text>
-                            <text 
-                                className={`ml-4 text-2xl ${grade[course.LetterGrade] === 'hidden' ? 'hidden' : ''}`}>
-                                Grade: <span className={ grade[course.LetterGrade] }>{ course.LetterGrade }</span>
-                            </text>
-                        </div>
-                        <button
-                            onClick={() => setDisplayDescription(prevDisplayDescription => {
-                                const newDisplayDescription = [...prevDisplayDescription];
-                                newDisplayDescription[index] = !newDisplayDescription[index];
-                                return newDisplayDescription;
-                            })}
-                            className='md:hidden flex items-center'
-                        >
-                            <text className='text-xl'>{displayDescription[index] ? 'Collapse' : 'Expand'}</text>
-                            <Image
-                                src={ `${displayDescription[index] ? '/up-arrow.svg' : '/down-arrow.svg'}` }
-                                alt='Down arrow'
-                                height='20'
-                                width='20'
+                courses.map((course: Course, i: number) => (
+                    <div key={ i } className='mt-2 mb-7'>
+                        <CourseItemHeader 
+                            key={ i }
+                            course={ course }
+                        />           
+                        <CollapseButton
+                            key={ i }
+                            i={ i }
+                            displayDescription={ displayDescription }
+                            setDisplayDescription={ setDisplayDescription }
+                        />
+                            <DefaultExpandedList
+                                idx={ i }
+                                course={ course }
+                                displayDescription={ displayDescription }
                             />
-                        </button>
-                        <ul key={ course.Name } className={ `md:hidden ${displayDescription[index] ? '' : 'hidden'} ml-6 text-xl list-disc tracking-wider` }>
-                            {
-                                course.Description.map((item: string, i: number) => (
-                                    <li key={ i } className='mb-4'>{ item }</li>
-                                ))
-                            }
-                        </ul>
-                        <ul key={ course.Name } className={ `hidden md:inline ml-6 text-xl list-disc tracking-wider` }>
-                            {
-                                course.Description.map((item: string, i: number) => (
-                                    <li key={ i } className='ml-8 mb-4'>{ item }</li>
-                                ))
-                            }
-                        </ul>
+                            <CollapsibleList course={ course } />                        
                     </div>
                 ))
             }

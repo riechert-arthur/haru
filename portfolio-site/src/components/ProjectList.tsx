@@ -12,11 +12,9 @@ export default function ProjectList() {
             {
                 projectMetadata.map((data: ProjectMetadata, index: number) => (
                     <div key={ index } className={`${montserrat.className}`}>
-
                         <div className='overflow-hidden w-full h-48 md:h-96 overflow-hidden rounded-2xl shadow-2xl'>
                             <img src={ data.thumbnail } alt={`${ data.title } thumbnail.`} className='w-full h-full object-cover' />
                         </div>
-
                         <h2 className={`mt-6 ${montserrat.className} text-4xl`}>{ data.title }</h2>
                         <p className='mt-2 font-light text-xl'>{ data.description }</p>
                         <div className='flex mt-6 mb-2 text-white'>
