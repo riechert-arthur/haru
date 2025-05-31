@@ -1,11 +1,23 @@
 import { motion } from "framer-motion";
 import { ThemeToggle } from "../theme-toggle";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
+import { Menu, X } from "lucide-react";
+import { Button } from "../ui/button";
+import { useState } from "react";
 
 export default function Navigation({
   activeSection,
 }: {
   activeSection: string;
 }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const navigationItems = ["Projects", "Courses", /*"Blog",*/ "Contact"];
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -19,8 +31,10 @@ export default function Navigation({
         >
           Arthur Riechert
         </motion.div>
-        <div className="flex items-center space-x-8">
-          {["Projects", "Courses", /*"Blog",*/ "Contact"].map((item) => (
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navigationItems.map((item) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -35,6 +49,37 @@ export default function Navigation({
             </motion.a>
           ))}
           <ThemeToggle />
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden flex items-center space-x-4">
+          <ThemeToggle />
+          <DropdownMenu onOpenChange={setIsOpen}>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="flex items-center justify-center h-9 w-9 border border-input bg-background hover:bg-accent hover:text-accent-foreground">
+                <div className="relative flex items-center justify-center w-5 h-5">
+                  <Menu className={`h-5 w-5 absolute transition-all duration-300 ${isOpen ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'}`} />
+                  <X className={`h-5 w-5 absolute transition-all duration-300 ${isOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'}`} />
+                </div>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {navigationItems.map((item) => (
+                <DropdownMenuItem key={item}>
+                  <a
+                    href={`#${item.toLowerCase()}`}
+                    className={`w-full ${
+                      activeSection === item.toLowerCase()
+                        ? "text-purple-400"
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {item}
+                  </a>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </motion.nav>
